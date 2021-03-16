@@ -27,9 +27,10 @@ public class JGrep {
         for (String line :
                 Files.readAllLines(Paths.get(args[0]))) {
             m.reset(line);
-            while (m.find())
+            while (m.find()) {
                 System.out.println(index++ + ": " +
                         m.group() + ": " + m.start());
+            }
         }
     }
 }

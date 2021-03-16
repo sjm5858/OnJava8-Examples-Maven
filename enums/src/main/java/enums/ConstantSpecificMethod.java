@@ -31,8 +31,9 @@ public enum ConstantSpecificMethod {
     abstract String getInfo();
 
     public static void main(String[] args) {
-        for (ConstantSpecificMethod csm : values())
+        for (ConstantSpecificMethod csm : values()) {
             System.out.println(csm.getInfo());
+        }
     }
 }
 /* Output:

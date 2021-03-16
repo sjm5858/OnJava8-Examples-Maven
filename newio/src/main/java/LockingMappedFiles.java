@@ -21,8 +21,9 @@ public class LockingMappedFiles {
                 .getChannel();
         MappedByteBuffer out = fc.map(
                 FileChannel.MapMode.READ_WRITE, 0, LENGTH);
-        for (int i = 0; i < LENGTH; i++)
+        for (int i = 0; i < LENGTH; i++) {
             out.put((byte) 'x');
+        }
         new LockAndModify(out, 0, 0 + LENGTH / 3);
         new LockAndModify(
                 out, LENGTH / 2, LENGTH / 2 + LENGTH / 4);
@@ -49,8 +50,9 @@ public class LockingMappedFiles {
                 System.out.println(
                         "Locked: " + start + " to " + end);
                 // Perform modification:
-                while (buff.position() < buff.limit() - 1)
+                while (buff.position() < buff.limit() - 1) {
                     buff.put((byte) (buff.get() + 1));
+                }
                 fl.release();
                 System.out.println(
                         "Released: " + start + " to " + end);

@@ -23,8 +23,9 @@ public class ApplesAndOrangesWithoutGenerics {
     @SuppressWarnings("unchecked")
     public static void main(String[] args) {
         ArrayList apples = new ArrayList();
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++) {
             apples.add(new Apple());
+        }
         // No problem adding an Orange to apples:
         apples.add(new Orange());
         for (Object apple : apples) {

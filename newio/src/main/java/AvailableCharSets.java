@@ -16,12 +16,14 @@ public class AvailableCharSets {
             System.out.print(csName);
             Iterator aliases = charSets.get(csName)
                     .aliases().iterator();
-            if (aliases.hasNext())
+            if (aliases.hasNext()) {
                 System.out.print(": ");
+            }
             while (aliases.hasNext()) {
                 System.out.print(aliases.next());
-                if (aliases.hasNext())
+                if (aliases.hasNext()) {
                     System.out.print(", ");
+                }
             }
             System.out.println();
         }

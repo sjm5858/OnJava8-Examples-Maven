@@ -11,8 +11,9 @@ public class Finding {
         Matcher m = Pattern.compile("\\w+")
                 .matcher(
                         "Evening is full of the linnet's wings");
-        while (m.find())
+        while (m.find()) {
             System.out.println(m.group() + " ");
+        }
         System.out.println();
         int i = 0;
         while (m.find(i)) {

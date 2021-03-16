@@ -26,10 +26,12 @@ public class Directories {
     }
 
     static void refreshTestDir() throws Exception {
-        if (Files.exists(test))
+        if (Files.exists(test)) {
             RmDir.rmdir(test);
-        if (!Files.exists(test))
+        }
+        if (!Files.exists(test)) {
             Files.createDirectory(test);
+        }
     }
 
     public static void

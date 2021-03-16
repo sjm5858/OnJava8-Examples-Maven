@@ -50,8 +50,9 @@ class Fruit {
         fq = q;
         seeds = seedCount;
         s = new Seed[seeds];
-        for (int i = 0; i < seeds; i++)
+        for (int i = 0; i < seeds; i++) {
             s[i] = new Seed();
+        }
     }
 
     // Other constructors:
@@ -62,8 +63,9 @@ class Fruit {
         seeds = f.seeds;
         s = new Seed[seeds];
         // Call all Seed copy-constructors:
-        for (int i = 0; i < seeds; i++)
+        for (int i = 0; i < seeds; i++) {
             s[i] = new Seed(f.s[i]);
+        }
         // Other copy-construction activities...
     }
 

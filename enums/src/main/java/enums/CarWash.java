@@ -61,8 +61,9 @@ public class CarWash {
     }
 
     public void washCar() {
-        for (Cycle c : cycles)
+        for (Cycle c : cycles) {
             c.action();
+        }
     }
 
     @Override

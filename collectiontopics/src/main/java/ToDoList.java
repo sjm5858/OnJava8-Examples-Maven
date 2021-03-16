@@ -19,13 +19,16 @@ class ToDoItem implements Comparable<ToDoItem> {
 
     @Override
     public int compareTo(ToDoItem arg) {
-        if (primary > arg.primary)
+        if (primary > arg.primary) {
             return +1;
-        if (primary == arg.primary)
-            if (secondary > arg.secondary)
+        }
+        if (primary == arg.primary) {
+            if (secondary > arg.secondary) {
                 return +1;
-            else if (secondary == arg.secondary)
+            } else if (secondary == arg.secondary) {
                 return 0;
+            }
+        }
         return -1;
     }
 
@@ -46,8 +49,9 @@ class ToDoList {
         toDo.add(new ToDoItem("Mow lawn", 'C', 3));
         toDo.add(new ToDoItem("Water lawn", 'A', 1));
         toDo.add(new ToDoItem("Feed cat", 'B', 1));
-        while (!toDo.isEmpty())
+        while (!toDo.isEmpty()) {
             System.out.println(toDo.remove());
+        }
     }
 }
 /* Output:

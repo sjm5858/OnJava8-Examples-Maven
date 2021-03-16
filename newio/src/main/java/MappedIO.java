@@ -41,8 +41,9 @@ public class MappedIO {
                                                     new FileOutputStream(
                                                             new File("temp.tmp"))))
                     ) {
-                        for (int i = 0; i < numOfInts; i++)
+                        for (int i = 0; i < numOfInts; i++) {
                             dos.writeInt(i);
+                        }
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -59,8 +60,9 @@ public class MappedIO {
                         IntBuffer ib =
                                 fc.map(FileChannel.MapMode.READ_WRITE,
                                         0, fc.size()).asIntBuffer();
-                        for (int i = 0; i < numOfInts; i++)
+                        for (int i = 0; i < numOfInts; i++) {
                             ib.put(i);
+                        }
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -75,8 +77,9 @@ public class MappedIO {
                                             new BufferedInputStream(
                                                     new FileInputStream("temp.tmp")))
                     ) {
-                        for (int i = 0; i < numOfInts; i++)
+                        for (int i = 0; i < numOfInts; i++) {
                             dis.readInt();
+                        }
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -92,8 +95,9 @@ public class MappedIO {
                         IntBuffer ib =
                                 fc.map(FileChannel.MapMode.READ_ONLY,
                                         0, fc.size()).asIntBuffer();
-                        while (ib.hasRemaining())
+                        while (ib.hasRemaining()) {
                             ib.get();
+                        }
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }
@@ -128,8 +132,9 @@ public class MappedIO {
                                 fc.map(FileChannel.MapMode.READ_WRITE,
                                         0, fc.size()).asIntBuffer();
                         ib.put(0);
-                        for (int i = 1; i < numOfUbuffInts; i++)
+                        for (int i = 1; i < numOfUbuffInts; i++) {
                             ib.put(ib.get(i - 1));
+                        }
                     } catch (IOException e) {
                         throw new RuntimeException(e);
                     }

@@ -17,9 +17,11 @@ public class CountedString {
         created.add(s);
         // id is the total number of instances
         // of this String used by CountedString:
-        for (String s2 : created)
-            if (s2.equals(s))
+        for (String s2 : created) {
+            if (s2.equals(s)) {
                 id++;
+            }
+        }
     }
 
     @Override

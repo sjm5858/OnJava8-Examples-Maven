@@ -14,8 +14,9 @@ public class Parcel10 {
             // Instance initialization for each object:
             {
                 cost = Math.round(price);
-                if (cost > 100)
+                if (cost > 100) {
                     System.out.println("Over budget!");
+                }
             }
 
             private String label = dest;

@@ -67,8 +67,9 @@ public class CADSystem extends Shape {
 
     public CADSystem(int i) {
         super(i + 1);
-        for (int j = 0; j < lines.length; j++)
+        for (int j = 0; j < lines.length; j++) {
             lines[j] = new Line(j, j * j);
+        }
         c = new Circle(1);
         t = new Triangle(1);
         System.out.println("Combined constructor");
@@ -81,8 +82,9 @@ public class CADSystem extends Shape {
         // of the order of initialization:
         t.dispose();
         c.dispose();
-        for (int i = lines.length - 1; i >= 0; i--)
+        for (int i = lines.length - 1; i >= 0; i--) {
             lines[i].dispose();
+        }
         super.dispose();
     }
 

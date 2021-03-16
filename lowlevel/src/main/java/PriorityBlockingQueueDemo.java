@@ -42,8 +42,9 @@ class Prioritized implements Comparable<Prioritized> {
         int count = 0;
         for (Prioritized pt : sequence) {
             System.out.printf("(%d:%d)", pt.id, pt.priority);
-            if (++count % 5 == 0)
+            if (++count % 5 == 0) {
                 System.out.println();
+            }
         }
     }
 

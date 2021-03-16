@@ -30,8 +30,9 @@ public class EnumImplementation {
     public static void main(String[] args) {
         // Choose any instance:
         CartoonCharacter cc = CartoonCharacter.BOB;
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++) {
             printNext(cc);
+        }
     }
 }
 /* Output:

@@ -104,8 +104,9 @@ public class Music4 {
     }
 
     static void tuneAll(Instrument[] e) {
-        for (Instrument i : e)
+        for (Instrument i : e) {
             tune(i);
+        }
     }
 
     public static void main(String[] args) {

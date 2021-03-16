@@ -24,8 +24,9 @@ public class TheReplacements {
         // Match specially commented block of text above:
         Matcher mInput = Pattern.compile(
                 "/\\*!(.*)!\\*/", Pattern.DOTALL).matcher(s);
-        if (mInput.find())
+        if (mInput.find()) {
             s = mInput.group(1); // Captured by parentheses
+        }
         // Replace two or more spaces with a single space:
         s = s.replaceAll(" {2,}", " ");
         // Replace 1+ spaces at the beginning of each
@@ -38,9 +39,10 @@ public class TheReplacements {
         Matcher m = p.matcher(s);
         // Process the find information as you
         // perform the replacements:
-        while (m.find())
+        while (m.find()) {
             m.appendReplacement(
                     sbuf, m.group().toUpperCase());
+        }
         // Put in the remainder of the text:
         m.appendTail(sbuf);
         System.out.println(sbuf);

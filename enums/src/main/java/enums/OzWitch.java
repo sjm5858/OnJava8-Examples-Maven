@@ -23,9 +23,10 @@ public enum OzWitch {
     }
 
     public static void main(String[] args) {
-        for (OzWitch witch : OzWitch.values())
+        for (OzWitch witch : OzWitch.values()) {
             System.out.println(
                     witch + ": " + witch.getDescription());
+        }
     }
 }
 /* Output:

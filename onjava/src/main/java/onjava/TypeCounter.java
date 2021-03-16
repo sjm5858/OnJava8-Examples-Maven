@@ -18,10 +18,11 @@ TypeCounter extends HashMap<Class<?>, Integer> {
 
     public void count(Object obj) {
         Class<?> type = obj.getClass();
-        if (!baseType.isAssignableFrom(type))
+        if (!baseType.isAssignableFrom(type)) {
             throw new RuntimeException(
                     obj + " incorrect type: " + type +
                             ", should be type or subtype of " + baseType);
+        }
         countClass(type);
     }
 
@@ -30,8 +31,9 @@ TypeCounter extends HashMap<Class<?>, Integer> {
         put(type, quantity == null ? 1 : quantity + 1);
         Class<?> superClass = type.getSuperclass();
         if (superClass != null &&
-                baseType.isAssignableFrom(superClass))
+                baseType.isAssignableFrom(superClass)) {
             countClass(superClass);
+        }
     }
 
     @Override

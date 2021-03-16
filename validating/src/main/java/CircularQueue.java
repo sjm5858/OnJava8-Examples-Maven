@@ -66,30 +66,40 @@ public class CircularQueue {
     // Design-by-contract support methods:
     private static void
     precondition(boolean cond, String msg) {
-        if (!cond) throw new CircularQueueException(msg);
+        if (!cond) {
+            throw new CircularQueueException(msg);
+        }
     }
 
     private static boolean
     postcondition(boolean cond, String msg) {
-        if (!cond) throw new CircularQueueException(msg);
+        if (!cond) {
+            throw new CircularQueueException(msg);
+        }
         return true;
     }
 
     private boolean invariant() {
         // Guarantee that no null values are in the
         // region of 'data' that holds objects:
-        for (int i = out; i != in; i = (i + 1) % data.length)
-            if (data[i] == null)
+        for (int i = out; i != in; i = (i + 1) % data.length) {
+            if (data[i] == null) {
                 throw new CircularQueueException(
                         "null in CircularQueue");
+            }
+        }
         // Guarantee that only null values are outside the
         // region of 'data' that holds objects:
-        if (full()) return true;
-        for (int i = in; i != out; i = (i + 1) % data.length)
-            if (data[i] != null)
+        if (full()) {
+            return true;
+        }
+        for (int i = in; i != out; i = (i + 1) % data.length) {
+            if (data[i] != null) {
                 throw new CircularQueueException(
                         "non-null outside of CircularQueue range: "
                                 + dump());
+            }
+        }
         return true;
     }
 

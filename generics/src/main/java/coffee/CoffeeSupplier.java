@@ -67,8 +67,9 @@ public class CoffeeSupplier
         Stream.generate(new CoffeeSupplier())
                 .limit(5)
                 .forEach(System.out::println);
-        for (Coffee c : new CoffeeSupplier(5))
+        for (Coffee c : new CoffeeSupplier(5)) {
             System.out.println(c);
+        }
     }
 }
 /* Output:

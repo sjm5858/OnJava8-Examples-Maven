@@ -21,9 +21,14 @@ public class SortedMapDemo {
         Iterator<Integer> it =
                 sortedMap.keySet().iterator();
         for (int i = 0; i <= 6; i++) {
-            if (i == 3) low = it.next();
-            if (i == 6) high = it.next();
-            else it.next();
+            if (i == 3) {
+                low = it.next();
+            }
+            if (i == 6) {
+                high = it.next();
+            } else {
+                it.next();
+            }
         }
         System.out.println(low);
         System.out.println(high);

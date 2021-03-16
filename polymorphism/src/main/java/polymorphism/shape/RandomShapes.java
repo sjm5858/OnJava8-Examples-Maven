@@ -25,8 +25,9 @@ public class RandomShapes {
     public Shape[] array(int sz) {
         Shape[] shapes = new Shape[sz];
         // Fill up the array with shapes:
-        for (int i = 0; i < shapes.length; i++)
+        for (int i = 0; i < shapes.length; i++) {
             shapes[i] = get();
+        }
         return shapes;
     }
 }

@@ -11,8 +11,9 @@ public class Bits {
     public static void printBitSet(BitSet b) {
         System.out.println("bits: " + b);
         StringBuilder bbits = new StringBuilder();
-        for (int j = 0; j < b.size(); j++)
+        for (int j = 0; j < b.size(); j++) {
             bbits.append(b.get(j) ? "1" : "0");
+        }
         System.out.println("bit pattern: " + bbits);
     }
 
@@ -21,31 +22,37 @@ public class Bits {
         // Take the LSB of nextInt():
         byte bt = (byte) rand.nextInt();
         BitSet bb = new BitSet();
-        for (int i = 7; i >= 0; i--)
-            if (((1 << i) & bt) != 0)
+        for (int i = 7; i >= 0; i--) {
+            if (((1 << i) & bt) != 0) {
                 bb.set(i);
-            else
+            } else {
                 bb.clear(i);
+            }
+        }
         System.out.println("byte value: " + bt);
         printBitSet(bb);
 
         short st = (short) rand.nextInt();
         BitSet bs = new BitSet();
-        for (int i = 15; i >= 0; i--)
-            if (((1 << i) & st) != 0)
+        for (int i = 15; i >= 0; i--) {
+            if (((1 << i) & st) != 0) {
                 bs.set(i);
-            else
+            } else {
                 bs.clear(i);
+            }
+        }
         System.out.println("short value: " + st);
         printBitSet(bs);
 
         int it = rand.nextInt();
         BitSet bi = new BitSet();
-        for (int i = 31; i >= 0; i--)
-            if (((1 << i) & it) != 0)
+        for (int i = 31; i >= 0; i--) {
+            if (((1 << i) & it) != 0) {
                 bi.set(i);
-            else
+            } else {
                 bi.clear(i);
+            }
+        }
         System.out.println("int value: " + it);
         printBitSet(bi);
 

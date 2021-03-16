@@ -40,8 +40,9 @@ public class MapOfList {
         System.out.println("Pets: " + petPeople.values());
         for (Person person : petPeople.keySet()) {
             System.out.println(person + " has:");
-            for (Pet pet : petPeople.get(person))
+            for (Pet pet : petPeople.get(person)) {
                 System.out.println("    " + pet);
+            }
         }
     }
 }

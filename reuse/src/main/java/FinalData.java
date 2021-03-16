@@ -47,8 +47,9 @@ public class FinalData {
         //- fd1.valueOne++; // Error: can't change value
         fd1.v2.i++; // Object isn't constant!
         fd1.v1 = new Value(9); // OK -- not final
-        for (int i = 0; i < fd1.a.length; i++)
+        for (int i = 0; i < fd1.a.length; i++) {
             fd1.a[i]++; // Object isn't constant!
+        }
         //- fd1.v2 = new Value(0); // Error: Can't
         //- fd1.VAL_3 = new Value(1); // change reference
         //- fd1.a = new int[3];

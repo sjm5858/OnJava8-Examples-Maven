@@ -16,7 +16,9 @@ public class Pizza {
         }
 
         Step forward() {
-            if (equals(BOXED)) return BOXED;
+            if (equals(BOXED)) {
+                return BOXED;
+            }
             new Nap(effort * 0.1);
             return values()[ordinal() + 1];
         }
@@ -36,9 +38,10 @@ public class Pizza {
     }
 
     public Pizza next(Step previousStep) {
-        if (!step.equals(previousStep))
+        if (!step.equals(previousStep)) {
             throw new IllegalStateException("Expected " +
                     previousStep + " but found " + step);
+        }
         return next();
     }
 

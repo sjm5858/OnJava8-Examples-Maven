@@ -19,7 +19,9 @@ class DualSynch {
     public synchronized void f(boolean nap) {
         for (int i = 0; i < 5; i++) {
             trace.add(String.format("f() " + i));
-            if (nap) new Nap(0.01);
+            if (nap) {
+                new Nap(0.01);
+            }
         }
     }
 
@@ -29,7 +31,9 @@ class DualSynch {
         synchronized (syncObject) {
             for (int i = 0; i < 5; i++) {
                 trace.add(String.format("g() " + i));
-                if (nap) new Nap(0.01);
+                if (nap) {
+                    new Nap(0.01);
+                }
             }
         }
     }

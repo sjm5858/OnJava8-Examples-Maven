@@ -24,7 +24,9 @@ public class QuittableTask implements Runnable {
     @Override
     public void run() {
         while (running.get())         // [1]
+        {
             new Nap(0.1);
+        }
         System.out.print(id + " ");  // [2]
     }
 }

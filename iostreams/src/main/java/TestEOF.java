@@ -17,8 +17,9 @@ public class TestEOF {
                         new BufferedInputStream(
                                 new FileInputStream("TestEOF.java")))
         ) {
-            while (in.available() != 0)
+            while (in.available() != 0) {
                 System.out.write(in.readByte());
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

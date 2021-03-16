@@ -40,12 +40,13 @@ public class TurnOffChecking {
         // leave the method:
         wce.throwRuntimeException(3);
         // Or you can choose to catch exceptions:
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < 4; i++) {
             try {
-                if (i < 3)
+                if (i < 3) {
                     wce.throwRuntimeException(i);
-                else
+                } else {
                     throw new SomeOtherException();
+                }
             } catch (SomeOtherException e) {
                 System.out.println(
                         "SomeOtherException: " + e);
@@ -61,6 +62,7 @@ public class TurnOffChecking {
                     System.out.println("Throwable: " + e);
                 }
             }
+        }
     }
 }
 /* Output:

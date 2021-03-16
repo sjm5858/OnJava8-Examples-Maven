@@ -25,11 +25,13 @@ public class SimpleProcessor
     public boolean process(
             Set<? extends TypeElement> annotations,
             RoundEnvironment env) {
-        for (TypeElement t : annotations)
+        for (TypeElement t : annotations) {
             System.out.println(t);
+        }
         for (Element el :
-                env.getElementsAnnotatedWith(Simple.class))
+                env.getElementsAnnotatedWith(Simple.class)) {
             display(el);
+        }
         return false;
     }
 

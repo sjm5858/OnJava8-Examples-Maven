@@ -31,8 +31,9 @@ public class AtUnitExample4 {
                 ConvertTo.boxed(word.toCharArray()));
         Collections.shuffle(chars, rand);
         StringBuilder result = new StringBuilder();
-        for (char ch : chars)
+        for (char ch : chars) {
             result.append(ch);
+        }
         return result.toString();
     }
 
@@ -44,10 +45,11 @@ public class AtUnitExample4 {
 
     @TestObjectCreate
     static AtUnitExample4 create() {
-        if (words.hasNext())
+        if (words.hasNext()) {
             return new AtUnitExample4(words.next());
-        else
+        } else {
             return null;
+        }
     }
 
     @Test

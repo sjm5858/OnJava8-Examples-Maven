@@ -29,9 +29,10 @@ public class SerialNumberChecker implements Runnable {
     }
 
     static void test(SerialNumbers producer) {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++) {
             CompletableFuture.runAsync(
                     new SerialNumberChecker(producer));
+        }
         new Nap(4, "No duplicates detected");
     }
 }

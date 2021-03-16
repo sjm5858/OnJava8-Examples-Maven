@@ -33,15 +33,17 @@ public class References {
 
     public static void checkQueue() {
         Reference<? extends VeryBig> inq = rq.poll();
-        if (inq != null)
+        if (inq != null) {
             System.out.println("In queue: " + inq.get());
+        }
     }
 
     public static void main(String[] args) {
         int size = 10;
         // Or, choose size via the command line:
-        if (args.length > 0)
+        if (args.length > 0) {
             size = Integer.valueOf(args[0]);
+        }
         LinkedList<SoftReference<VeryBig>> sa =
                 new LinkedList<>();
         for (int i = 0; i < size; i++) {

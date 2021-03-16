@@ -11,7 +11,8 @@ IntTestable implements Runnable, IntSupplier {
 
     @Override
     public void run() {
-        while (true)
+        while (true) {
             evenIncrement();
+        }
     }
 }

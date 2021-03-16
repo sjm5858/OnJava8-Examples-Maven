@@ -51,8 +51,9 @@ public class IfaceExtractorProcessor
                     interfaceMethods.add(enclosed);
                 }
             }
-            if (interfaceMethods.size() > 0)
+            if (interfaceMethods.size() > 0) {
                 writeInterfaceFile(interfaceName);
+            }
         }
         return false;
     }

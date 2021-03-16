@@ -20,7 +20,9 @@ abstract class StateMachine {
     // Template method:
     protected final void runAll() {
         while (changeState()) // Customizable
+        {
             currentState.run();
+        }
     }
 }
 
@@ -69,8 +71,9 @@ class Washer extends StateMachine {
             // surrogate reference to a new object:
             currentState = states[i++];
             return true;
-        } else
+        } else {
             return false;
+        }
     }
 }
 

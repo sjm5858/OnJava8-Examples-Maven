@@ -13,16 +13,19 @@ public class AssociativeArray<K, V> {
     }
 
     public void put(K key, V value) {
-        if (index >= pairs.length)
+        if (index >= pairs.length) {
             throw new ArrayIndexOutOfBoundsException();
+        }
         pairs[index++] = new Object[]{key, value};
     }
 
     @SuppressWarnings("unchecked")
     public V get(K key) {
-        for (int i = 0; i < index; i++)
-            if (key.equals(pairs[i][0]))
+        for (int i = 0; i < index; i++) {
+            if (key.equals(pairs[i][0])) {
                 return (V) pairs[i][1];
+            }
+        }
         return null; // Did not find key
     }
 
@@ -33,8 +36,9 @@ public class AssociativeArray<K, V> {
             result.append(pairs[i][0].toString());
             result.append(" : ");
             result.append(pairs[i][1].toString());
-            if (i < index - 1)
+            if (i < index - 1) {
                 result.append("\n");
+            }
         }
         return result.toString();
     }

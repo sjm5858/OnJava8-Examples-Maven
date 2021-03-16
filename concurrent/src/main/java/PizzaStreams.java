@@ -16,8 +16,9 @@ public class PizzaStreams {
                 .mapToObj(Pizza::new)
                 .parallel()             // [1]
                 .forEach(za -> {
-                    while (!za.complete())
+                    while (!za.complete()) {
                         za.next();
+                    }
                 });
         System.out.println(timer.duration());
     }

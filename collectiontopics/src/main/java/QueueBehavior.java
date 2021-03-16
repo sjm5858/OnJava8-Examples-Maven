@@ -18,8 +18,9 @@ public class QueueBehavior {
     static void test(int id, Queue<String> queue) {
         System.out.print(id + ": ");
         strings().map(queue::offer).count();
-        while (queue.peek() != null)
+        while (queue.peek() != null) {
             System.out.print(queue.remove() + " ");
+        }
         System.out.println();
     }
 

@@ -12,8 +12,9 @@ public class AssemblingMultidimensionalArrays {
         a = new Integer[3][];
         for (int i = 0; i < a.length; i++) {
             a[i] = new Integer[3];
-            for (int j = 0; j < a[i].length; j++)
+            for (int j = 0; j < a[i].length; j++) {
                 a[i][j] = i * j; // Autoboxing
+            }
         }
         System.out.println(Arrays.deepToString(a));
     }

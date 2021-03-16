@@ -16,9 +16,12 @@ public class ArrayOptions {
         // automatically initialized to null:
         show("b", b);
         BerylliumSphere[] c = new BerylliumSphere[4];
-        for (int i = 0; i < c.length; i++)
+        for (int i = 0; i < c.length; i++) {
             if (c[i] == null) // Can test for null reference
+            {
                 c[i] = new BerylliumSphere();
+            }
+        }
 
         // Aggregate initialization:
         BerylliumSphere[] d = {
@@ -48,8 +51,9 @@ public class ArrayOptions {
         // automatically initialized to zero:
         show("f", f);
         int[] g = new int[4];
-        for (int i = 0; i < g.length; i++)
+        for (int i = 0; i < g.length; i++) {
             g[i] = i * i;
+        }
         int[] h = {11, 47, 93};
 
         //  Compile error: variable e not initialized:

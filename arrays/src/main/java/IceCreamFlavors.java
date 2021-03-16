@@ -18,14 +18,16 @@ public class IceCreamFlavors {
     };
 
     public static String[] flavorSet(int n) {
-        if (n > FLAVORS.length)
+        if (n > FLAVORS.length) {
             throw new IllegalArgumentException("Set too big");
+        }
         String[] results = new String[n];
         boolean[] picked = new boolean[FLAVORS.length];
         for (int i = 0; i < n; i++) {
             int t;
-            do
+            do {
                 t = rand.nextInt(FLAVORS.length);
+            }
             while (picked[t]);
             results[i] = FLAVORS[t];
             picked[t] = true;
@@ -34,8 +36,9 @@ public class IceCreamFlavors {
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < 7; i++) {
             show(flavorSet(3));
+        }
     }
 }
 /* Output:

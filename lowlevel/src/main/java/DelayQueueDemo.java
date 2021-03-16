@@ -39,8 +39,12 @@ class DelayedTask implements Runnable, Delayed {
     @Override
     public int compareTo(Delayed arg) {
         DelayedTask that = (DelayedTask) arg;
-        if (trigger < that.trigger) return -1;
-        if (trigger > that.trigger) return 1;
+        if (trigger < that.trigger) {
+            return -1;
+        }
+        if (trigger > that.trigger) {
+            return 1;
+        }
         return 0;
     }
 
@@ -83,8 +87,9 @@ public class DelayQueueDemo {
                         Stream.of(new DelayedTask.EndTask(4000)))
                         .collect(Collectors
                                 .toCollection(DelayQueue::new));
-        while (tasks.size() > 0)
+        while (tasks.size() > 0) {
             tasks.take().run();
+        }
     }
 }
 /* Output:

@@ -35,8 +35,9 @@ public class ClassNameFinder {
                     case 1: // UTF
                         int length = data.readShort();
                         char[] bytes = new char[length];
-                        for (int k = 0; k < bytes.length; k++)
+                        for (int k = 0; k < bytes.length; k++) {
                             bytes[k] = (char) data.read();
+                        }
                         String className = new String(bytes);
                         classNameTable.put(i, className);
                         break;

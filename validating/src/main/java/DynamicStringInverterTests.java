@@ -32,8 +32,9 @@ class DynamicStringInverterTests {
                             inverter.getClass().getSimpleName() +
                                     ": " + id);
                     try {
-                        if (test.apply(inverter) != "fail")
+                        if (test.apply(inverter) != "fail") {
                             System.out.println("Success");
+                        }
                     } catch (Exception | Error e) {
                         System.out.println(
                                 "Exception: " + e.getMessage());
@@ -43,8 +44,9 @@ class DynamicStringInverterTests {
     }
 
     String isEqual(String lval, String rval) {
-        if (lval.equals(rval))
+        if (lval.equals(rval)) {
             return "success";
+        }
         System.out.println("FAIL: " + lval + " != " + rval);
         return "fail";
     }
@@ -94,8 +96,9 @@ class DynamicStringInverterTests {
                                     return cc;
                                 }
                             }).collect(Collectors.joining(""));
-                    if (result.length() == 0)
+                    if (result.length() == 0) {
                         return "success";
+                    }
                     System.out.println("Bad characters: " + result);
                     return "fail";
                 }

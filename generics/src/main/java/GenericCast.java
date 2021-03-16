@@ -17,8 +17,9 @@ class FixedSizeStack<T> {
     }
 
     public void push(T item) {
-        if (index < size)
+        if (index < size) {
             storage[index++] = item;
+        }
     }
 
     @SuppressWarnings("unchecked")

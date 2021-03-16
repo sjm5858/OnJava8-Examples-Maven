@@ -38,27 +38,34 @@ class FindMinima {
         System.out.println("LeastSquares.algorithm");
         boolean weSucceed = false;
         if (weSucceed) // Actual test/calculation here
+        {
             return new Result(Arrays.asList(1.1, 2.2));
-        else // Try the next one in the chain:
+        } else // Try the next one in the chain:
+        {
             return new Fail();
+        }
     }
 
     public static Result perturbation(List<Double> line) {
         System.out.println("Perturbation.algorithm");
         boolean weSucceed = false;
         if (weSucceed) // Actual test/calculation here
+        {
             return new Result(Arrays.asList(3.3, 4.4));
-        else
+        } else {
             return new Fail();
+        }
     }
 
     public static Result bisection(List<Double> line) {
         System.out.println("Bisection.algorithm");
         boolean weSucceed = true;
         if (weSucceed) // Actual test/calculation here
+        {
             return new Result(Arrays.asList(5.5, 6.6));
-        else
+        } else {
             return new Fail();
+        }
     }
 
     static List<Function<List<Double>, Result>>
@@ -72,8 +79,9 @@ class FindMinima {
         for (Function<List<Double>, Result> alg :
                 algorithms) {
             Result result = alg.apply(line);
-            if (result.success)
+            if (result.success) {
                 return result;
+            }
         }
         return new Fail();
     }
@@ -86,10 +94,11 @@ public class ChainOfResponsibility {
                 1.0, 2.0, 1.0, 2.0, -1.0,
                 3.0, 4.0, 5.0, 4.0);
         Result result = solver.minima(line);
-        if (result.success)
+        if (result.success) {
             System.out.println(result.line);
-        else
+        } else {
             System.out.println("No algorithm found");
+        }
     }
 }
 /* Output:

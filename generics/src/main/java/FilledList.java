@@ -15,8 +15,9 @@ public class FilledList<T> extends ArrayList<T> {
     }
 
     public FilledList(T t, int size) {
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < size; i++) {
             this.add(t);
+        }
     }
 
     public static void main(String[] args) {

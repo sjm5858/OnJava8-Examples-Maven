@@ -21,8 +21,9 @@ public class Sequence {
     }
 
     public void add(Object x) {
-        if (next < items.length)
+        if (next < items.length) {
             items[next++] = x;
+        }
     }
 
     private class SequenceSelector implements Selector {
@@ -40,7 +41,9 @@ public class Sequence {
 
         @Override
         public void next() {
-            if (i < items.length) i++;
+            if (i < items.length) {
+                i++;
+            }
         }
     }
 
@@ -50,8 +53,9 @@ public class Sequence {
 
     public static void main(String[] args) {
         Sequence sequence = new Sequence(10);
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 10; i++) {
             sequence.add(Integer.toString(i));
+        }
         Selector selector = sequence.selector();
         while (!selector.end()) {
             System.out.print(selector.current() + " ");

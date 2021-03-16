@@ -14,11 +14,12 @@ public class Summing {
         System.out.print(id + ": ");
         Timer timer = new Timer();
         long result = operation.getAsLong();
-        if (result == checkValue)
+        if (result == checkValue) {
             System.out.println(timer.duration() + "ms");
-        else
+        } else {
             System.out.format("result: %d%ncheckValue: %d%n",
                     result, checkValue);
+        }
     }
 
     public static final int SZ = 100_000_000;

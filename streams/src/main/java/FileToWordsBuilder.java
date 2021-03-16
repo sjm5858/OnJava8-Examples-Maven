@@ -15,8 +15,9 @@ public class FileToWordsBuilder {
         Files.lines(Paths.get(filePath))
                 .skip(1) // Skip the comment line at the beginning
                 .forEach(line -> {
-                    for (String w : line.split("[ .?,]+"))
+                    for (String w : line.split("[ .?,]+")) {
                         builder.add(w);
+                    }
                 });
     }
 

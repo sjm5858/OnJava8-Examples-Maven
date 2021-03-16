@@ -18,8 +18,9 @@ public class LinkedHashMapDemo {
                 new LinkedHashMap<>(16, 0.75f, true);
         linkedMap.putAll(new CountMap(9));
         System.out.println(linkedMap);
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < 6; i++) {
             linkedMap.get(i);
+        }
         System.out.println(linkedMap);
         linkedMap.get(0);
         System.out.println(linkedMap);

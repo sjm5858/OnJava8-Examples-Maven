@@ -22,8 +22,9 @@ public class Groups {
                 "(?m)(\\S+)\\s+((\\S+)\\s+(\\S+))$")
                 .matcher(POEM);
         while (m.find()) {
-            for (int j = 0; j <= m.groupCount(); j++)
+            for (int j = 0; j <= m.groupCount(); j++) {
                 System.out.print("[" + m.group(j) + "]");
+            }
             System.out.println();
         }
     }

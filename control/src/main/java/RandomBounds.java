@@ -12,13 +12,15 @@ public class RandomBounds {
         new TimedAbort(3);
         switch (args.length == 0 ? "" : args[0]) {
             case "lower":
-                while (Math.random() != 0.0)
+                while (Math.random() != 0.0) {
                     ; // Keep trying
+                }
                 System.out.println("Produced 0.0!");
                 break;
             case "upper":
-                while (Math.random() != 1.0)
+                while (Math.random() != 1.0) {
                     ; // Keep trying
+                }
                 System.out.println("Produced 1.0!");
                 break;
             default:

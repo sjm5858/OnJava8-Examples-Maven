@@ -12,21 +12,24 @@ public class Snake implements Cloneable {
     // Value of i == number of segments
     public Snake(int i, char x) {
         c = x;
-        if (--i > 0)
+        if (--i > 0) {
             next = new Snake(i, (char) (x + 1));
+        }
     }
 
     public void increment() {
         c++;
-        if (next != null)
+        if (next != null) {
             next.increment();
+        }
     }
 
     @Override
     public String toString() {
         String s = ":" + c;
-        if (next != null)
+        if (next != null) {
             s += next.toString();
+        }
         return s;
     }
 

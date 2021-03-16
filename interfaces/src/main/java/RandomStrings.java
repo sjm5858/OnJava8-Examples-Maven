@@ -24,8 +24,9 @@ public class RandomStrings implements Readable {
 
     @Override
     public int read(CharBuffer cb) {
-        if (count-- == 0)
+        if (count-- == 0) {
             return -1; // Indicates end of input
+        }
         cb.append(CAPITALS[rand.nextInt(CAPITALS.length)]);
         for (int i = 0; i < 4; i++) {
             cb.append(VOWELS[rand.nextInt(VOWELS.length)]);
@@ -37,8 +38,9 @@ public class RandomStrings implements Readable {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(new RandomStrings(10));
-        while (s.hasNext())
+        while (s.hasNext()) {
             System.out.println(s.next());
+        }
     }
 }
 /* Output:

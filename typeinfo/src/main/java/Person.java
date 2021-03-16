@@ -36,8 +36,9 @@ class Person {
 
     @Override
     public String toString() {
-        if (empty)
+        if (empty) {
             return "<Empty>";
+        }
         return (first.orElse("") +
                 " " + last.orElse("") +
                 " " + address.orElse("")).trim();

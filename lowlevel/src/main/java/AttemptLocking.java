@@ -19,8 +19,9 @@ public class AttemptLocking {
         try {
             System.out.println("tryLock(): " + captured);
         } finally {
-            if (captured)
+            if (captured) {
                 lock.unlock();
+            }
         }
     }
 
@@ -35,8 +36,9 @@ public class AttemptLocking {
             System.out.println(
                     "tryLock(2, TimeUnit.SECONDS): " + captured);
         } finally {
-            if (captured)
+            if (captured) {
                 lock.unlock();
+            }
         }
     }
 

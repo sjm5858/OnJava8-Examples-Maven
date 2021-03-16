@@ -22,8 +22,9 @@ public class RandomWords implements Supplier<String> {
                 Files.readAllLines(Paths.get(fname));
         // Skip the first line:
         for (String line : lines.subList(1, lines.size())) {
-            for (String word : line.split("[ .?,]+"))
+            for (String word : line.split("[ .?,]+")) {
                 words.add(word.toLowerCase());
+            }
         }
     }
 

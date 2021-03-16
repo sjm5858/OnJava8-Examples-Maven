@@ -15,8 +15,9 @@ public class ComparingArrays {
     static String[][] twoDArray() {
         String[][] md = new String[5][];
         Arrays.setAll(md, n -> new String[n]);
-        for (int i = 0; i < md.length; i++)
+        for (int i = 0; i < md.length; i++) {
             Arrays.setAll(md[i], new Rand.String()::get);
+        }
         return md;
     }
 

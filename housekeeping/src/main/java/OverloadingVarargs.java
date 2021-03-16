@@ -6,15 +6,17 @@
 public class OverloadingVarargs {
     static void f(Character... args) {
         System.out.print("first");
-        for (Character c : args)
+        for (Character c : args) {
             System.out.print(" " + c);
+        }
         System.out.println();
     }
 
     static void f(Integer... args) {
         System.out.print("second");
-        for (Integer i : args)
+        for (Integer i : args) {
             System.out.print(" " + i);
+        }
         System.out.println();
     }
 

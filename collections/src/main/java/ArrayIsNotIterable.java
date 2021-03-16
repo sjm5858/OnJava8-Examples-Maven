@@ -7,8 +7,9 @@ import java.util.Arrays;
 
 public class ArrayIsNotIterable {
     static <T> void test(Iterable<T> ib) {
-        for (T t : ib)
+        for (T t : ib) {
             System.out.print(t + " ");
+        }
     }
 
     public static void main(String[] args) {

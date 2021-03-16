@@ -18,8 +18,9 @@ public class InterfaceVsIterator {
     }
 
     public static void display(Collection<Pet> pets) {
-        for (Pet p : pets)
+        for (Pet p : pets) {
             System.out.print(p.id() + ":" + p + " ");
+        }
         System.out.println();
     }
 
@@ -29,8 +30,9 @@ public class InterfaceVsIterator {
         Map<String, Pet> petMap = new LinkedHashMap<>();
         String[] names = ("Ralph, Eric, Robin, Lacey, " +
                 "Britney, Sam, Spot, Fluffy").split(", ");
-        for (int i = 0; i < names.length; i++)
+        for (int i = 0; i < names.length; i++) {
             petMap.put(names[i], petList.get(i));
+        }
         display(petList);
         display(petSet);
         display(petList.iterator());

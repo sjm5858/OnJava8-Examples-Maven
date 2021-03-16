@@ -9,8 +9,9 @@ public class Rudolph {
                 "Rudolph",
                 "[rR]udolph",
                 "[rR][aeiou][a-z]ol.*",
-                "R.*"})
+                "R.*"}) {
             System.out.println("Rudolph".matches(pattern));
+        }
     }
 }
 /* Output:

@@ -24,8 +24,9 @@ class MixinProxy implements InvocationHandler {
                 String methodName = method.getName();
                 // The first interface in the map
                 // implements the method.
-                if (!delegatesByMethod.containsKey(methodName))
+                if (!delegatesByMethod.containsKey(methodName)) {
                     delegatesByMethod.put(methodName, pair.a1);
+                }
             }
         }
     }

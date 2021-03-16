@@ -32,8 +32,9 @@ public class ZipCompress {
                 ) {
                     zos.putNextEntry(new ZipEntry(arg));
                     int c;
-                    while ((c = in.read()) != -1)
+                    while ((c = in.read()) != -1) {
                         out.write(c);
+                    }
                 }
                 out.flush();
             }
@@ -58,12 +59,14 @@ public class ZipCompress {
             while ((ze = in2.getNextEntry()) != null) {
                 System.out.println("Reading file " + ze);
                 int x;
-                while ((x = bis.read()) != -1)
+                while ((x = bis.read()) != -1) {
                     System.out.write(x);
+                }
             }
-            if (args.length == 1)
+            if (args.length == 1) {
                 System.out.println(
                         "Checksum: " + csumi.getChecksum().getValue());
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -22,8 +22,9 @@ public class CompType implements Comparable<CompType> {
     @Override
     public String toString() {
         String result = "[i = " + i + ", j = " + j + "]";
-        if (count++ % 3 == 0)
+        if (count++ % 3 == 0) {
             result += "\n";
+        }
         return result;
     }
 

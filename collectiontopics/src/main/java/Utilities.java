@@ -58,8 +58,9 @@ public class Utilities {
         Enumeration<String> e =
                 Collections.enumeration(dups);
         Vector<String> v = new Vector<>();
-        while (e.hasMoreElements())
+        while (e.hasMoreElements()) {
             v.addElement(e.nextElement());
+        }
         // Converting an old-style Vector
         // to a List via an Enumeration:
         ArrayList<String> arrayList =

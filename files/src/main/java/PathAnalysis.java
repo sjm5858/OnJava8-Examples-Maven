@@ -34,12 +34,14 @@ public class PathAnalysis {
         say("Owner", Files.getOwner(p));
         say("ContentType", Files.probeContentType(p));
         say("SymbolicLink", Files.isSymbolicLink(p));
-        if (Files.isSymbolicLink(p))
+        if (Files.isSymbolicLink(p)) {
             say("SymbolicLink", Files.readSymbolicLink(p));
+        }
         if (FileSystems.getDefault()
-                .supportedFileAttributeViews().contains("posix"))
+                .supportedFileAttributeViews().contains("posix")) {
             say("PosixFilePermissions",
                     Files.getPosixFilePermissions(p));
+        }
     }
 }
 /* Output:

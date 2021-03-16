@@ -48,11 +48,13 @@ public class Compete {
     public static void
     main(String[] args) throws Exception {
         Thing2[] a = new Thing2[SIZE];
-        for (int i = 0; i < SIZE; i++)
+        for (int i = 0; i < SIZE; i++) {
             a[i] = new Thing2();
+        }
         Thing4[] b = new Thing4[SIZE];
-        for (int i = 0; i < SIZE; i++)
+        for (int i = 0; i < SIZE; i++) {
             b[i] = new Thing4();
+        }
         Timer timer = new Timer();
         try (
                 ByteArrayOutputStream buf =
@@ -71,8 +73,9 @@ public class Compete {
                                             buf.toByteArray()))
             ) {
                 Thing2[] c = new Thing2[SIZE];
-                for (int i = 0; i < SIZE; i++)
+                for (int i = 0; i < SIZE; i++) {
                     c[i] = (Thing2) in.readObject();
+                }
             }
         }
         System.out.println(
@@ -82,8 +85,9 @@ public class Compete {
         // Now try cloning:
         timer = new Timer();
         Thing4[] d = new Thing4[SIZE];
-        for (int i = 0; i < SIZE; i++)
+        for (int i = 0; i < SIZE; i++) {
             d[i] = b[i].clone();
+        }
         System.out.println(
                 "Duplication via cloning: " +
                         timer.duration() + " Milliseconds");

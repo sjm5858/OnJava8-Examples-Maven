@@ -45,8 +45,9 @@ public class GetChannel {
             ByteBuffer buff = ByteBuffer.allocate(BSIZE);
             fc.read(buff);
             buff.flip();
-            while (buff.hasRemaining())
+            while (buff.hasRemaining()) {
                 System.out.write(buff.get());
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

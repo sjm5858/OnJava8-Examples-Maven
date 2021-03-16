@@ -15,8 +15,9 @@ public class CountingTask implements Callable<Integer> {
     @Override
     public Integer call() {
         Integer val = 0;
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 100; i++) {
             val++;
+        }
         System.out.println(id + " " +
                 Thread.currentThread().getName() + " " + val);
         return val;

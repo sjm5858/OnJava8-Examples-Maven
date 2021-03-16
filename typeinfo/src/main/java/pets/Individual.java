@@ -47,12 +47,14 @@ Individual implements Comparable<Individual> {
         String first = getClass().getSimpleName();
         String argFirst = arg.getClass().getSimpleName();
         int firstCompare = first.compareTo(argFirst);
-        if (firstCompare != 0)
+        if (firstCompare != 0) {
             return firstCompare;
+        }
         if (name != null && arg.name != null) {
             int secondCompare = name.compareTo(arg.name);
-            if (secondCompare != 0)
+            if (secondCompare != 0) {
                 return secondCompare;
+            }
         }
         return (arg.id < id ? -1 : (arg.id == id ? 0 : 1));
     }

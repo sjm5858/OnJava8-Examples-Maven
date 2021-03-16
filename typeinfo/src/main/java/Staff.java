@@ -11,8 +11,9 @@ public class Staff extends ArrayList<Position> {
     }
 
     public void add(String... titles) {
-        for (String title : titles)
+        for (String title : titles) {
             add(new Position(title));
+        }
     }
 
     public Staff(String... titles) {
@@ -20,20 +21,23 @@ public class Staff extends ArrayList<Position> {
     }
 
     public boolean positionAvailable(String title) {
-        for (Position position : this)
+        for (Position position : this) {
             if (position.getTitle().equals(title) &&
-                    position.getPerson().empty)
+                    position.getPerson().empty) {
                 return true;
+            }
+        }
         return false;
     }
 
     public void fillPosition(String title, Person hire) {
-        for (Position position : this)
+        for (Position position : this) {
             if (position.getTitle().equals(title) &&
                     position.getPerson().empty) {
                 position.setPerson(hire);
                 return;
             }
+        }
         throw new RuntimeException(
                 "Position " + title + " not available");
     }
@@ -49,10 +53,11 @@ public class Staff extends ArrayList<Position> {
                 new Person("Me", "Last", "The Top, Lonely At"));
         staff.fillPosition("Project Lead",
                 new Person("Janet", "Planner", "The Burbs"));
-        if (staff.positionAvailable("Software Engineer"))
+        if (staff.positionAvailable("Software Engineer")) {
             staff.fillPosition("Software Engineer",
                     new Person(
                             "Bob", "Coder", "Bright Light City"));
+        }
         System.out.println(staff);
     }
 }

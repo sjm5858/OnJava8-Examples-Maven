@@ -34,10 +34,11 @@ public class SpringDetector {
             Groundhog gh = ghog.newInstance(3);
             System.out.println(
                     "Looking up prediction for " + gh);
-            if (map.containsKey(gh))
+            if (map.containsKey(gh)) {
                 System.out.println(map.get(gh));
-            else
+            } else {
                 System.out.println("Key not found: " + gh);
+            }
         } catch (NoSuchMethodException |
                 IllegalAccessException |
                 InvocationTargetException |

@@ -10,8 +10,9 @@ public class OnePizza {
         Pizza za = new Pizza(0);
         System.out.println(
                 Timer.duration(() -> {
-                    while (!za.complete())
+                    while (!za.complete()) {
                         za.next();
+                    }
                 }));
     }
 }

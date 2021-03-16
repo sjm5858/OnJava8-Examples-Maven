@@ -142,8 +142,9 @@ public interface Rand {
             int[] primitive = new Pint().array(sz);
             java.lang.Integer[] result =
                     new java.lang.Integer[sz];
-            for (int i = 0; i < sz; i++)
+            for (int i = 0; i < sz; i++) {
                 result[i] = primitive[i];
+            }
             return result;
         }
     }
@@ -182,8 +183,9 @@ public interface Rand {
             long[] primitive = new Plong().array(sz);
             java.lang.Long[] result =
                     new java.lang.Long[sz];
-            for (int i = 0; i < sz; i++)
+            for (int i = 0; i < sz; i++) {
                 result[i] = primitive[i];
+            }
             return result;
         }
     }
@@ -255,8 +257,9 @@ public interface Rand {
                     new Pdouble().array(sz);
             java.lang.Double[] result =
                     new java.lang.Double[sz];
-            for (int i = 0; i < sz; i++)
+            for (int i = 0; i < sz; i++) {
                 result[i] = primitive[i];
+            }
             return result;
         }
     }

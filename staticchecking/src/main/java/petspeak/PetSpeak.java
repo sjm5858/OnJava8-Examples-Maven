@@ -29,8 +29,9 @@ public class PetSpeak {
 
     public static void main(String[] args) {
         Pet[] pets = {new Cat(), new Dog()};
-        for (Pet pet : pets)
+        for (Pet pet : pets) {
             command(pet);
+        }
     }
 }
 /* Output:

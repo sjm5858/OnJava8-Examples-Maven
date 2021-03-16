@@ -18,8 +18,9 @@ public class RecursiveFibonacci {
 
     public static void main(String[] args) {
         RecursiveFibonacci rf = new RecursiveFibonacci();
-        for (int i = 0; i <= 10; i++)
+        for (int i = 0; i <= 10; i++) {
             System.out.println(rf.fibonacci(i));
+        }
     }
 }
 /* Output:

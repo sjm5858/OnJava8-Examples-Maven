@@ -9,10 +9,11 @@ public class TernaryIfElse {
     }
 
     static int standardIfElse(int i) {
-        if (i < 10)
+        if (i < 10) {
             return i * 100;
-        else
+        } else {
             return i * 10;
+        }
     }
 
     public static void main(String[] args) {

@@ -123,8 +123,9 @@ public class RoShamBo1 {
     }
 
     public static void main(String[] args) {
-        for (int i = 0; i < SIZE; i++)
+        for (int i = 0; i < SIZE; i++) {
             match(newItem(), newItem());
+        }
     }
 }
 /* Output:

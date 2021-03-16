@@ -25,21 +25,23 @@ public class ProcessFiles {
 
     public void start(String[] args) {
         try {
-            if (args.length == 0)
+            if (args.length == 0) {
                 processDirectoryTree(new File("."));
-            else
+            } else {
                 for (String arg : args) {
                     File fileArg = new File(arg);
-                    if (fileArg.isDirectory())
+                    if (fileArg.isDirectory()) {
                         processDirectoryTree(fileArg);
-                    else {
+                    } else {
                         // Allow user to leave off extension:
-                        if (!arg.endsWith("." + ext))
+                        if (!arg.endsWith("." + ext)) {
                             arg += "." + ext;
+                        }
                         strategy.process(
                                 new File(arg).getCanonicalFile());
                     }
                 }
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

@@ -19,19 +19,25 @@ public class Equality {
 
     @Override
     public boolean equals(Object rval) {
-        if (rval == null)
+        if (rval == null) {
             return false;
-        if (rval == this)
+        }
+        if (rval == this) {
             return true;
-        if (!(rval instanceof Equality))
+        }
+        if (!(rval instanceof Equality)) {
             return false;
+        }
         Equality other = (Equality) rval;
-        if (!Objects.equals(i, other.i))
+        if (!Objects.equals(i, other.i)) {
             return false;
-        if (!Objects.equals(s, other.s))
+        }
+        if (!Objects.equals(s, other.s)) {
             return false;
-        if (!Objects.equals(d, other.d))
+        }
+        if (!Objects.equals(d, other.d)) {
             return false;
+        }
         return true;
     }
 

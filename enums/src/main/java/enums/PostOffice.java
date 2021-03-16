@@ -155,9 +155,11 @@ public class PostOffice {
     }
 
     static void handle(Mail m) {
-        for (MailHandler handler : MailHandler.values())
-            if (handler.handle(m))
+        for (MailHandler handler : MailHandler.values()) {
+            if (handler.handle(m)) {
                 return;
+            }
+        }
         System.out.println(m + " is a dead letter");
     }
 

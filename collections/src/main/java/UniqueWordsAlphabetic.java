@@ -17,10 +17,13 @@ public class UniqueWordsAlphabetic {
                 Paths.get("SetOperations.java"));
         Set<String> words =
                 new TreeSet<>(String.CASE_INSENSITIVE_ORDER);
-        for (String line : lines)
-            for (String word : line.split("\\W+"))
-                if (word.trim().length() > 0)
+        for (String line : lines) {
+            for (String word : line.split("\\W+")) {
+                if (word.trim().length() > 0) {
                     words.add(word);
+                }
+            }
+        }
         System.out.println(words);
     }
 }

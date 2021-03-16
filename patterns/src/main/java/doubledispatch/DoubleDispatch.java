@@ -53,8 +53,9 @@ class TrashBinSet {
     public void sortIntoBins(List bin) {
         bin.forEach(aBin -> {
             TypedBinMember t = (TypedBinMember) aBin;
-            if (!t.addToBin(binSet))
+            if (!t.addToBin(binSet)) {
                 System.err.println("Couldn't add " + t);
+            }
         });
     }
 

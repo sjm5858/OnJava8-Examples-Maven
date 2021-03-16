@@ -5,8 +5,9 @@
 
 public class AutoboxingVarargs {
     public static void f(Integer... args) {
-        for (Integer i : args)
+        for (Integer i : args) {
             System.out.print(i + " ");
+        }
         System.out.println();
     }
 

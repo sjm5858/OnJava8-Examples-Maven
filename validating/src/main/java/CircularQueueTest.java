@@ -15,7 +15,9 @@ public class CircularQueueTest {
     @BeforeEach
     public void initialize() {
         while (i < 5) // Pre-load with some data
+        {
             queue.put(Integer.toString(i++));
+        }
     }
 
     // Support methods:
@@ -37,8 +39,9 @@ public class CircularQueueTest {
         System.out.println(queue.dump());
         System.out.println(queue.get());
         System.out.println(queue.get());
-        while (!queue.full())
+        while (!queue.full()) {
             queue.put(Integer.toString(i++));
+        }
         String msg = "";
         try {
             queue.put("");
@@ -53,8 +56,9 @@ public class CircularQueueTest {
     @Test
     public void empty() {
         System.out.println("testEmpty");
-        while (!queue.empty())
+        while (!queue.empty()) {
             System.out.println(queue.get());
+        }
         String msg = "";
         try {
             queue.get();
@@ -82,18 +86,22 @@ public class CircularQueueTest {
     @Test
     public void circularity() {
         System.out.println("testCircularity");
-        while (!queue.full())
+        while (!queue.full()) {
             queue.put(Integer.toString(i++));
+        }
         showFullness();
         assertTrue(queue.isWrapped());
-        while (!queue.empty())
+        while (!queue.empty()) {
             System.out.println(queue.get());
+        }
         showEmptiness();
-        while (!queue.full())
+        while (!queue.full()) {
             queue.put(Integer.toString(i++));
+        }
         showFullness();
-        while (!queue.empty())
+        while (!queue.empty()) {
             System.out.println(queue.get());
+        }
         showEmptiness();
     }
 }

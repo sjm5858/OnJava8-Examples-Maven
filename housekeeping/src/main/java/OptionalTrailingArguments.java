@@ -6,8 +6,9 @@
 public class OptionalTrailingArguments {
     static void f(int required, String... trailing) {
         System.out.print("required: " + required + " ");
-        for (String s : trailing)
+        for (String s : trailing) {
             System.out.print(s + " ");
+        }
         System.out.println();
     }
 

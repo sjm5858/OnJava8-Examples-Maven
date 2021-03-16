@@ -34,8 +34,9 @@ public class IterableClass implements Iterable<String> {
     }
 
     public static void main(String[] args) {
-        for (String s : new IterableClass())
+        for (String s : new IterableClass()) {
             System.out.print(s + " ");
+        }
     }
 }
 /* Output:

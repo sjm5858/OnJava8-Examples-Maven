@@ -18,14 +18,16 @@ public class Reflection {
         System.out.println(
                 "_____ Analyzing " + enumClass + " _____");
         System.out.println("Interfaces:");
-        for (Type t : enumClass.getGenericInterfaces())
+        for (Type t : enumClass.getGenericInterfaces()) {
             System.out.println(t);
+        }
         System.out.println(
                 "Base: " + enumClass.getSuperclass());
         System.out.println("Methods: ");
         Set<String> methods = new TreeSet<>();
-        for (Method m : enumClass.getMethods())
+        for (Method m : enumClass.getMethods()) {
             methods.add(m.getName());
+        }
         System.out.println(methods);
         return methods;
     }

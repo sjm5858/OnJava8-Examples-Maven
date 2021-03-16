@@ -30,9 +30,11 @@ enum Category {
             new EnumMap<>(Input.class);
 
     static {
-        for (Category c : Category.class.getEnumConstants())
-            for (Input type : c.values)
+        for (Category c : Category.class.getEnumConstants()) {
+            for (Input type : c.values) {
                 categories.put(type, c);
+            }
+        }
     }
 
     public static Category categorize(Input input) {
@@ -71,10 +73,12 @@ public class VendingMachine {
                         break;
                     case ITEM_SELECTION:
                         selection = input;
-                        if (amount < selection.amount())
+                        if (amount < selection.amount()) {
                             System.out.println(
                                     "Insufficient money for " + selection);
-                        else state = DISPENSING;
+                        } else {
+                            state = DISPENSING;
+                        }
                         break;
                     case QUIT_TRANSACTION:
                         state = GIVING_CHANGE;
@@ -137,8 +141,9 @@ public class VendingMachine {
     static void run(Supplier<Input> gen) {
         while (state != State.TERMINAL) {
             state.next(gen.get());
-            while (state.isTransient)
+            while (state.isTransient) {
                 state.next();
+            }
             state.output();
         }
     }
@@ -146,8 +151,9 @@ public class VendingMachine {
     public static void main(String[] args) {
         args = new String[]{"enums/src/main/java/enums/VendingMachineInput.txt"};
         Supplier<Input> gen = new RandomInputSupplier();
-        if (args.length == 1)
+        if (args.length == 1) {
             gen = new FileInputSupplier(args[0]);
+        }
         run(gen);
     }
 }
@@ -179,8 +185,9 @@ class FileInputSupplier implements Supplier<Input> {
 
     @Override
     public Input get() {
-        if (!input.hasNext())
+        if (!input.hasNext()) {
             return null;
+        }
         return Enum.valueOf(
                 Input.class, input.next().trim());
     }

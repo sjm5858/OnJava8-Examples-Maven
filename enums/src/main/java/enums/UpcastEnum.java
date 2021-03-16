@@ -15,8 +15,9 @@ public class UpcastEnum {
         System.out.println(Arrays.toString(vals));
         Enum e = Search.HITHER; // Upcast
         // e.values(); // No values() in Enum
-        for (Enum en : e.getClass().getEnumConstants())
+        for (Enum en : e.getClass().getEnumConstants()) {
             System.out.println(en);
+        }
     }
 }
 /* Output:

@@ -31,16 +31,19 @@ public class BoxObserver extends JFrame {
         setTitle("Demonstrates Observer pattern");
         Container cp = getContentPane();
         cp.setLayout(new GridLayout(grid, grid));
-        for (int x = 0; x < grid; x++)
-            for (int y = 0; y < grid; y++)
+        for (int x = 0; x < grid; x++) {
+            for (int y = 0; y < grid; y++) {
                 cp.add(new OCBox(x, y, notifier));
+            }
+        }
     }
 
     public static void main(String[] args) {
         new TimedAbort(4);
         int grid = 8;
-        if (args.length > 0)
+        if (args.length > 0) {
             grid = Integer.parseInt(args[0]);
+        }
         JFrame f = new BoxObserver(grid);
         f.setSize(500, 400);
         f.setVisible(true);

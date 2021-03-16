@@ -9,10 +9,11 @@ import java.util.stream.Stream;
 
 public class Optionals {
     static void basics(Optional<String> optString) {
-        if (optString.isPresent())
+        if (optString.isPresent()) {
             System.out.println(optString.get());
-        else
+        } else {
             System.out.println("Nothing inside!");
+        }
     }
 
     static void ifPresent(Optional<String> optString) {

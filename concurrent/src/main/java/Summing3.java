@@ -10,8 +10,9 @@ public class Summing3 {
     static long basicSum(Long[] ia) {
         long sum = 0;
         int size = ia.length;
-        for (int i = 0; i < size; i++)
+        for (int i = 0; i < size; i++) {
             sum += ia[i];
+        }
         return sum;
     }
 

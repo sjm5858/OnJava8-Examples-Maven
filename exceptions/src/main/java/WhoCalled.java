@@ -10,8 +10,9 @@ public class WhoCalled {
         try {
             throw new Exception();
         } catch (Exception e) {
-            for (StackTraceElement ste : e.getStackTrace())
+            for (StackTraceElement ste : e.getStackTrace()) {
                 System.out.println(ste.getMethodName());
+            }
         }
     }
 

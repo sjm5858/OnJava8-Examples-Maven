@@ -120,12 +120,15 @@ public class RecycleA {
         // Sort the Trash:
         bin.forEach(t -> {
             // RTTI to discover Trash type:
-            if (t instanceof Aluminum)
+            if (t instanceof Aluminum) {
                 alBin.add((Aluminum) t);
-            if (t instanceof Paper)
+            }
+            if (t instanceof Paper) {
                 paperBin.add((Paper) t);
-            if (t instanceof Glass)
+            }
+            if (t instanceof Glass) {
                 glassBin.add((Glass) t);
+            }
         });
         Trash.sumValue(alBin);
         Trash.sumValue(paperBin);

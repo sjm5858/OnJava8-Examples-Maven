@@ -18,8 +18,9 @@ class Shared {
     }
 
     protected void dispose() {
-        if (--refcount == 0)
+        if (--refcount == 0) {
             System.out.println("Disposing " + this);
+        }
     }
 
     @Override
@@ -60,8 +61,9 @@ public class ReferenceCounting {
                 new Composing(shared),
                 new Composing(shared)
         };
-        for (Composing c : composing)
+        for (Composing c : composing) {
             c.dispose();
+        }
     }
 }
 /* Output:

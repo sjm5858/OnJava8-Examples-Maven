@@ -92,8 +92,9 @@ public class ListOps {
         System.out.println(a);
         // Traverse the list backwards:
         x = a.listIterator(a.size());
-        while (x.hasPrevious())
+        while (x.hasPrevious()) {
             System.out.print(x.previous() + " ");
+        }
         System.out.println();
         System.out.println("testVisual finished");
     }

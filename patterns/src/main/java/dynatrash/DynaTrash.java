@@ -22,9 +22,9 @@ class TypeMap<T> {
 
     public void add(T o) {
         Class type = o.getClass();
-        if (t.containsKey(type))
+        if (t.containsKey(type)) {
             t.get(type).add(o);
-        else {
+        } else {
             List<T> v = new ArrayList<>();
             v.add(o);
             t.put(type, v);

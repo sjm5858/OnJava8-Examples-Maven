@@ -10,7 +10,9 @@ public class Machina {
         START, ONE, TWO, THREE, END;
 
         State step() {
-            if (equals(END)) return END;
+            if (equals(END)) {
+                return END;
+            }
             return values()[ordinal() + 1];
         }
     }

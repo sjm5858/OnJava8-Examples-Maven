@@ -55,9 +55,13 @@ public class TypesForSets {
     static <T> void
     fill(Set<T> set, Function<Integer, T> type) {
         for (int i = 10; i >= 5; i--) // Descending
+        {
             set.add(type.apply(i));
+        }
         for (int i = 0; i < 5; i++) // Ascending
+        {
             set.add(type.apply(i));
+        }
     }
 
     static <T> void

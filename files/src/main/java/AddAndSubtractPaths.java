@@ -13,11 +13,12 @@ public class AddAndSubtractPaths {
             .normalize();
 
     static void show(int id, Path result) {
-        if (result.isAbsolute())
+        if (result.isAbsolute()) {
             System.out.println("(" + id + ")r " +
                     base.relativize(result));
-        else
+        } else {
             System.out.println("(" + id + ")  " + result);
+        }
         try {
             System.out.println("RealPath: "
                     + result.toRealPath());

@@ -13,7 +13,9 @@ public class ImperativeRandoms {
         SortedSet<Integer> rints = new TreeSet<>();
         while (rints.size() < 7) {
             int r = rand.nextInt(20);
-            if (r < 5) continue;
+            if (r < 5) {
+                continue;
+            }
             rints.add(r);
         }
         System.out.println(rints);

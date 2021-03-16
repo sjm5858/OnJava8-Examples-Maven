@@ -5,10 +5,12 @@
 
 public class TestWithReturn {
     static int test(int testval, int target) {
-        if (testval > target)
+        if (testval > target) {
             return +1;
-        if (testval < target)
+        }
+        if (testval < target) {
             return -1;
+        }
         return 0; // Match
     }
 

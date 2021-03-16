@@ -42,7 +42,9 @@ public class Bath {
     @Override
     public String toString() {
         if (s4 == null) // Delayed initialization:
+        {
             s4 = "Joy";
+        }
         return
                 "s1 = " + s1 + "\n" +
                         "s2 = " + s2 + "\n" +

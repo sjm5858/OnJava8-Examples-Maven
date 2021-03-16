@@ -29,8 +29,9 @@ public class CountedListTest {
     public void initialize() {
         list = new CountedList();
         System.out.println("Set up for " + list.getId());
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 3; i++) {
             list.add(Integer.toString(i));
+        }
     }
 
     @AfterEach
