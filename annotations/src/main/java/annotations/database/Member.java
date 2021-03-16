@@ -10,7 +10,7 @@ public class Member {
     String firstName;
     @SQLString(50)
     String lastName;
-    @SQLInteger
+    @SQLInteger(name = "sf")
     Integer age;
     @SQLString(value = 30,
             constraints = @Constraints(primaryKey = true))

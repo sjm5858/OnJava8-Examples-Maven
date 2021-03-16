@@ -22,7 +22,7 @@ public class ParallelStreamPuzzle {
         List<Integer> x =
                 Stream.generate(new IntGenerator())
                         .limit(10)
-                        .parallel()  // [1]
+//                        .parallel()  // [1]
                         .collect(Collectors.toList());
         System.out.println(x);
     }

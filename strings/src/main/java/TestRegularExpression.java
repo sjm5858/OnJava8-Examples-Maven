@@ -9,6 +9,7 @@
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+// abcabcabcdefabc "abc+" "(abc)+"
 public class TestRegularExpression {
     public static void main(String[] args) {
         if (args.length < 2) {

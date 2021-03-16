@@ -7,8 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class GenericReading {
-    static List<Apple> apples =
-            Arrays.asList(new Apple());
+    static List<Apple> apples = Arrays.asList(new Apple());
     static List<Fruit> fruit = Arrays.asList(new Fruit());
 
     static <T> T readExact(List<T> list) {

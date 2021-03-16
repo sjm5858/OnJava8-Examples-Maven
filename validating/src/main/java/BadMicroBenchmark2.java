@@ -4,10 +4,11 @@
 // Visit http://OnJava8.com for more book information.
 // Relying on a common resource
 
+import onjava.Timer;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.SplittableRandom;
-import java.util.Timer;
 
 public class BadMicroBenchmark2 {
     // SIZE reduced to make it run faster:
@@ -17,14 +18,14 @@ public class BadMicroBenchmark2 {
         long[] la = new long[SIZE];
         Random r = new Random();
         System.out.println("parallelSetAll: " +
-                java.util.Timer.duration(() ->
+                Timer.duration(() ->
                         Arrays.parallelSetAll(la, n -> r.nextLong())));
         System.out.println("setAll: " +
-                java.util.Timer.duration(() ->
+                Timer.duration(() ->
                         Arrays.setAll(la, n -> r.nextLong())));
         SplittableRandom sr = new SplittableRandom();
         System.out.println("parallelSetAll: " +
-                java.util.Timer.duration(() ->
+                Timer.duration(() ->
                         Arrays.parallelSetAll(la, n -> sr.nextLong())));
         System.out.println("setAll: " +
                 Timer.duration(() ->

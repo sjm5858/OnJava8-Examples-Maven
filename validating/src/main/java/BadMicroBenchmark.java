@@ -5,7 +5,7 @@
 // {ExcludeFromTravisCI}
 
 import java.util.Arrays;
-import java.util.Timer;
+import onjava.Timer;
 
 public class BadMicroBenchmark {
     static final int SIZE = 250_000_000;
@@ -14,7 +14,7 @@ public class BadMicroBenchmark {
         try { // For machines with insufficient memory
             long[] la = new long[SIZE];
             System.out.println("setAll: " +
-                    java.util.Timer.duration(() ->
+                    Timer.duration(() ->
                             Arrays.setAll(la, n -> n)));
             System.out.println("parallelSetAll: " +
                     Timer.duration(() ->

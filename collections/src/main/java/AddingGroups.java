@@ -16,6 +16,7 @@ public class AddingGroups {
         // construct a Collection this way:
         Collections.addAll(collection, 11, 12, 13, 14, 15);
         Collections.addAll(collection, moreInts);
+        System.out.println(collection);
         // Produces a list "backed by" an array:
         List<Integer> list = Arrays.asList(16, 17, 18, 19, 20);
         list.set(1, 99); // OK -- modify an element

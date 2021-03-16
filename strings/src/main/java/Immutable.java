@@ -14,6 +14,11 @@ public class Immutable {
         String qq = upcase(q);
         System.out.println(qq); // HOWDY
         System.out.println(q); // howdy
+
+        String s = "asdf";
+        String x = Immutable.upcase(s);
+        System.out.println(s);
+        System.out.println(x);
     }
 }
 /* Output:

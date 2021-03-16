@@ -29,7 +29,7 @@ public class AddAndSubtractPaths {
     public static void main(String[] args) {
         System.out.println(System.getProperty("os.name"));
         System.out.println(base);
-        Path p = Paths.get("AddAndSubtractPaths.java")
+        Path p = Paths.get("D:\\codes\\ssm\\OnJava8\\files\\src\\main\\java\\AddAndSubtractPaths.java")
                 .toAbsolutePath();
         show(1, p);
         Path convoluted = p.getParent().getParent()

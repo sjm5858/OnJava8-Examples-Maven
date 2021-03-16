@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 public class ReadLineStream {
     public static void
     main(String[] args) throws Exception {
-        Files.lines(Paths.get("PathInfo.java"))
+        Files.lines(Paths.get("D:\\codes\\ssm\\OnJava8\\files\\src\\main\\java\\PathInfo.java"))
                 .skip(13)
                 .findFirst()
                 .ifPresent(System.out::println);

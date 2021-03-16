@@ -14,6 +14,7 @@ public class ParallelSetAll {
         int[] ia = new int[SIZE];
         Arrays.setAll(ia, new Rand.Pint()::get);
         Arrays.parallelSetAll(ia, new Rand.Pint()::get);
+//        System.out.println(Arrays.toString(ia));
     }
 
     static void longArray() {

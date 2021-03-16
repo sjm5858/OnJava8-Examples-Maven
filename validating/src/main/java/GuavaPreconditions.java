@@ -24,6 +24,12 @@ public class GuavaPreconditions {
 
     public static void main(String[] args) {
         test(s -> s = checkNotNull(s), "X");
+//        test(new Consumer<String>() {
+//            @Override
+//            public void accept(String s) {
+//                s = checkNotNull(s);
+//            }
+//        }, "X");
         test(s -> s = checkNotNull(s), null);
         test(s -> s = checkNotNull(s, "s was null"), null);
         test(s -> s = checkNotNull(

@@ -15,6 +15,7 @@ import java.util.List;
 public class TableCreator {
     public static void
     main(String[] args) throws Exception {
+        args = new String[]{"annotations.database.Member"};
         if (args.length < 1) {
             System.out.println(
                     "arguments: annotated classes");

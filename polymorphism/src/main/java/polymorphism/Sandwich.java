@@ -6,6 +6,8 @@
 // {java polymorphism.Sandwich}
 package polymorphism;
 
+import java.awt.print.PrinterAbortException;
+
 class Meal {
     Meal() {
         System.out.println("Meal()");
@@ -37,9 +39,16 @@ class Lunch extends Meal {
 }
 
 class PortableLunch extends Lunch {
+    private int a = 9;
+
+    public int getA() {
+        return a;
+    }
+
     PortableLunch() {
         System.out.println("PortableLunch()");
     }
+
 }
 
 public class Sandwich extends PortableLunch {
@@ -50,9 +59,17 @@ public class Sandwich extends PortableLunch {
     public Sandwich() {
         System.out.println("Sandwich()");
     }
+    public static void test(){
+        System.out.println("test");
+    }
+    public int getA(){
+        return super.getA();
+    }
 
     public static void main(String[] args) {
-        new Sandwich();
+        Sandwich sandwich = new Sandwich();
+//        Sandwich.a;
+        Sandwich.test();
     }
 }
 /* Output:

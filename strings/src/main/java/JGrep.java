@@ -14,6 +14,7 @@ import java.util.regex.Pattern;
 public class JGrep {
     public static void
     main(String[] args) throws Exception {
+        args = new String[]{"strings/src/main/java/JGrep.java","for"};
         if (args.length < 2) {
             System.out.println(
                     "Usage: java JGrep file regex");

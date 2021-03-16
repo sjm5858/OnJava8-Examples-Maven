@@ -20,6 +20,7 @@ public class ShowMethods {
     private static Pattern p = Pattern.compile("\\w+\\.");
 
     public static void main(String[] args) {
+        args = new String[]{"ShowMethods"};
         if (args.length < 1) {
             System.out.println(usage);
             System.exit(0);

@@ -144,6 +144,7 @@ public class VendingMachine {
     }
 
     public static void main(String[] args) {
+        args = new String[]{"enums/src/main/java/enums/VendingMachineInput.txt"};
         Supplier<Input> gen = new RandomInputSupplier();
         if (args.length == 1)
             gen = new FileInputSupplier(args[0]);

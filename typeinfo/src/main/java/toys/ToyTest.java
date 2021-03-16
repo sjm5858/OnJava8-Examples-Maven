@@ -45,7 +45,7 @@ public class ToyTest {
     public static void main(String[] args) {
         Class c = null;
         try {
-            c = Class.forName("typeinfo.toys.FancyToy");
+            c = Class.forName("toys.FancyToy");
         } catch (ClassNotFoundException e) {
             System.out.println("Can't find FancyToy");
             System.exit(1);

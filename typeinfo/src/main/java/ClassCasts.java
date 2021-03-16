@@ -14,6 +14,8 @@ public class ClassCasts {
         Building b = new House();
         Class<House> houseType = House.class;
         House h = houseType.cast(b);
+        System.out.println(h);
         h = (House) b; // ... or just do this.
+        System.out.println(h);
     }
 }

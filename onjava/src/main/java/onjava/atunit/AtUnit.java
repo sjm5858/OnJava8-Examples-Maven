@@ -25,6 +25,20 @@ public class AtUnit implements ProcessFiles.Strategy {
 
     public static void
     main(String[] args) throws Exception {
+        // 测试 AtUnitExample1
+        args = new String[]{"D:\\codes\\ssm\\OnJava8\\onjava\\target\\classes\\onjava\\atunit\\AtUnitExample1.class"};
+        // 测试 AUExternalTest
+//        args = new String[]{"D:\\codes\\ssm\\OnJava8\\onjava\\target\\classes\\onjava\\atunit\\AUExternalTest.class"};
+        // 测试 AUComposition
+//        args = new String[]{"D:\\codes\\ssm\\OnJava8\\onjava\\target\\classes\\onjava\\atunit\\AUComposition.class"};
+        // 测试 AtUnitExample2
+//        args = new String[]{"D:\\codes\\ssm\\OnJava8\\onjava\\target\\classes\\onjava\\atunit\\AtUnitExample2.class"};
+        // 测试 AtUnitExample3
+//        args = new String[]{"D:\\codes\\ssm\\OnJava8\\onjava\\target\\classes\\onjava\\atunit\\AtUnitExample3.class"};
+        // 测试 AtUnitExample4
+//        args = new String[]{"D:\\codes\\ssm\\OnJava8\\onjava\\target\\classes\\onjava\\atunit\\AtUnitExample4.class"};
+        // 测试 AtUnitExample5
+//        args = new String[]{"D:\\codes\\ssm\\OnJava8\\onjava\\target\\classes\\onjava\\atunit\\AtUnitExample5.class"};
         ClassLoader.getSystemClassLoader()
                 .setDefaultAssertionStatus(true); // Enable assert
         new ProcessFiles(new AtUnit(), "class").start(args);

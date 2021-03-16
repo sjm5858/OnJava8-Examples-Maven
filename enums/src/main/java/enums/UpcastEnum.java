@@ -4,11 +4,15 @@ package enums;// enums/UpcastEnum.java
 // Visit http://OnJava8.com for more book information.
 // No values() method if you upcast an enum
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 enum Search {HITHER, YON}
 
 public class UpcastEnum {
     public static void main(String[] args) {
         Search[] vals = Search.values();
+        System.out.println(Arrays.toString(vals));
         Enum e = Search.HITHER; // Upcast
         // e.values(); // No values() in Enum
         for (Enum en : e.getClass().getEnumConstants())

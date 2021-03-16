@@ -11,6 +11,6 @@ abstract class Basic3 {
 }
 
 public class AbstractWithoutAbstracts {
-    // Basic3 b3 = new Basic3();
+//     Basic3 b3 = new Basic3();
     // error: Basic3 is abstract; cannot be instantiated
 }

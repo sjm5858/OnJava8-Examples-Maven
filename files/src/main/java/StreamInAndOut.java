@@ -12,13 +12,13 @@ public class StreamInAndOut {
     public static void main(String[] args) {
         try (
                 Stream<String> input =
-                        Files.lines(Paths.get("StreamInAndOut.java"));
+                        Files.lines(Paths.get("D:\\codes\\ssm\\OnJava8\\files\\src\\main\\java\\StreamInAndOut.java"));
                 PrintWriter output =
                         new PrintWriter("StreamInAndOut.txt")
         ) {
-            input
-                    .map(String::toUpperCase)
-                    .forEachOrdered(output::println);
+            input.
+                    map(String::toUpperCase).
+                    forEachOrdered(output::println);
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

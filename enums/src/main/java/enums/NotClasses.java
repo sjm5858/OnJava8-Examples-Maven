@@ -28,7 +28,7 @@ enum LikeClasses {
 }
 
 public class NotClasses {
-    // void f1(LikeClasses.WINKEN instance) {} // Nope
+//     void f1(LikeClasses.WINKEN instance) {} // Nope
 }
 /* Output: (First 12 Lines)
 Compiled from "NotClasses.java"

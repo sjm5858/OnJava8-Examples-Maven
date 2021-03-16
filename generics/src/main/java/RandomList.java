@@ -22,7 +22,17 @@ public class RandomList<T> extends ArrayList<T> {
                         "the lazy brown dog").split(" "))
                 .forEach(rs::add);
         IntStream.range(0, 11).forEach(i ->
-                System.out.print(rs.select() + " "));
+                System.out.print(i + "++" + rs.select() + " "));
+
+        RandomList<String> rs1 = new RandomList<>();
+        Arrays.stream(
+                ("The quick brown fox jumped over " +
+                        "the lazy brown dog").split(" "))
+                .forEach(rs1::add);
+        System.out.println();
+        for (int i = 0; i < 11; i++) {
+            System.out.print(i + "++" + rs1.select() + " ");
+        }
     }
 }
 /* Output:

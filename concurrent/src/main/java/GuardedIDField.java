@@ -10,6 +10,7 @@ public class GuardedIDField implements HasID {
             new AtomicInteger();
     private int id = counter.getAndIncrement();
 
+    @Override
     public int getID() {
         return id;
     }

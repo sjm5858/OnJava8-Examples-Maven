@@ -6,6 +6,9 @@
 
 import interfacea.A;
 
+/**
+ * 把接口实现为一个私有内部类
+ */
 class InnerA {
     private static class C implements A {
         public void f() {
@@ -33,6 +36,7 @@ class InnerA {
         return new C();
     }
 }
+
 
 public class InnerImplementation {
     public static void

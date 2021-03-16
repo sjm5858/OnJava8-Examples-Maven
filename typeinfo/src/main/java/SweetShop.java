@@ -35,6 +35,7 @@ public class SweetShop {
         System.out.println("After Class.forName(\"Gum\")");
         new Cookie();
         System.out.println("After creating Cookie");
+        new Gum();
     }
 }
 /* Output:

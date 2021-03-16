@@ -12,6 +12,7 @@ interface SharedArg {
 class Unsafe implements SharedArg {
     private int i = 0;
 
+    @Override
     public int get() {
         return i++;
     }
@@ -21,6 +22,7 @@ class Safe implements SharedArg {
     private static AtomicInteger counter =
             new AtomicInteger();
 
+    @Override
     public int get() {
         return counter.getAndIncrement();
     }

@@ -30,7 +30,7 @@ public class AsListInference {
     public static void main(String[] args) {
         List<Snow> snow1 = Arrays.asList(
                 new Crusty(), new Slush(), new Powder());
-        //- snow1.add(new Heavy()); // Exception
+//         snow1.add(new Heavy()); // Exception
 
         List<Snow> snow2 = Arrays.asList(
                 new Light(), new Heavy());

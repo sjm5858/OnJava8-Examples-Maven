@@ -2,13 +2,16 @@
 // (c)2017 MindView LLC: see Copyright.txt
 // We make no guarantees that this code is fit for any purpose.
 // Visit http://OnJava8.com for more book information.
-// This produces a specific application of the
-// control system, all in a single class. Inner
-// classes allow you to encapsulate different
-// functionality for each type of event.
 
-import innerclasses.controller.*;
 
+import controller.*;
+
+/**
+ * This produces a specific application of the
+ * control system, all in a single class. Inner
+ * classes allow you to encapsulate different
+ * functionality for each type of event.
+ */
 public class GreenhouseControls extends Controller {
     private boolean light = false;
 
@@ -144,8 +147,9 @@ public class GreenhouseControls extends Controller {
         public Restart(long delayTime, Event[] eventList) {
             super(delayTime);
             this.eventList = eventList;
-            for (Event e : eventList)
+            for (Event e : eventList) {
                 addEvent(e);
+            }
         }
 
         @Override

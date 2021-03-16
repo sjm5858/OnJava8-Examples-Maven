@@ -19,7 +19,7 @@ public class PathAnalysis {
     main(String[] args) throws IOException {
         System.out.println(System.getProperty("os.name"));
         Path p =
-                Paths.get("PathAnalysis.java").toAbsolutePath();
+                Paths.get("D:\\codes\\ssm\\OnJava8\\files\\src\\main\\java\\PathAnalysis.java").toAbsolutePath();
         say("Exists", Files.exists(p));
         say("Directory", Files.isDirectory(p));
         say("Executable", Files.isExecutable(p));

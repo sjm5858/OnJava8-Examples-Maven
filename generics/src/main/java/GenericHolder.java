@@ -19,9 +19,10 @@ public class GenericHolder<T> {
 
     public static void main(String[] args) {
         GenericHolder<Automobile> h3 =
-                new GenericHolder<Automobile>();
+                new GenericHolder<>();
         h3.set(new Automobile()); // type checked
         Automobile a = h3.get(); // No cast needed
+        System.out.println(a);
         //- h3.set("Not an Automobile"); // Error
         //- h3.set(1); // Error
     }

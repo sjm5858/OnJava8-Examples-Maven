@@ -7,6 +7,7 @@
 import interfacea.A;
 
 class B implements A {
+    @Override
     public void f() {
     }
 

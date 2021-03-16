@@ -23,6 +23,7 @@ public class PathWatcher {
                         try {
                             System.out.println("deleting " + f);
                             Files.delete(f);
+//                            Thread.sleep(10);
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }
@@ -43,7 +44,7 @@ public class PathWatcher {
         Executors.newSingleThreadScheduledExecutor()
                 .schedule(
                         PathWatcher::delTxtFiles,
-                        250, TimeUnit.MILLISECONDS);
+                        2500, TimeUnit.MILLISECONDS);
         WatchKey key = watcher.take();
         for (WatchEvent evt : key.pollEvents()) {
             System.out.println(
@@ -52,6 +53,7 @@ public class PathWatcher {
                             "\nevt.kind(): " + evt.kind());
             System.exit(0);
         }
+        Thread.sleep(10000);
     }
 }
 /* Output:

@@ -12,7 +12,7 @@ public class Finding {
                 .matcher(
                         "Evening is full of the linnet's wings");
         while (m.find())
-            System.out.print(m.group() + " ");
+            System.out.println(m.group() + " ");
         System.out.println();
         int i = 0;
         while (m.find(i)) {

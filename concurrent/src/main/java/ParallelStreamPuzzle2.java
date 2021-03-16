@@ -34,7 +34,7 @@ public class ParallelStreamPuzzle2 {
         List<Integer> x =
                 Stream.generate(new IntGenerator())
                         .limit(10)
-                        .parallel()
+//                        .parallel()
                         .collect(Collectors.toList());
         System.out.println(x);
         Files.write(Paths.get("PSP2.txt"), trace);

@@ -11,6 +11,7 @@ public class SLF4JLevels {
             LoggerFactory.getLogger(SLF4JLevels.class);
 
     public static void main(String[] args) {
+
         log.trace("Hello");
         log.debug("Logging");
         log.info("Using");

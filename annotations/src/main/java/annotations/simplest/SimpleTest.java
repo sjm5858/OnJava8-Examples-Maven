@@ -6,6 +6,12 @@
 // {java annotations.simplest.SimpleTest}
 package annotations.simplest;
 
+/**
+ *
+ D:\codes\ssm\OnJava8\annotations\src\main\java\annotations\simplest>javac -cp . -processor annotations.simplest.SimpleProcessor SimpleTest.java
+ D:\codes\ssm\OnJava8\annotations\src\main\java\annotations\simplest>javac -d . Simple.java SimpleProcessor.java
+
+ */
 @Simple
 public class SimpleTest {
     @Simple

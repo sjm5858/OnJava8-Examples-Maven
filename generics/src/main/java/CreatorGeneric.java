@@ -16,6 +16,9 @@ abstract class GenericWithCreate<T> {
 class X {
 }
 
+class Y {
+}
+
 class XCreator extends GenericWithCreate<X> {
     @Override
     X create() {
@@ -28,10 +31,24 @@ class XCreator extends GenericWithCreate<X> {
     }
 }
 
+class YCreator extends GenericWithCreate<Y> {
+    @Override
+    Y create() {
+        return new Y();
+    }
+
+    void f() {
+        System.out.println(
+                element.getClass().getSimpleName());
+    }
+}
+
 public class CreatorGeneric {
     public static void main(String[] args) {
         XCreator xc = new XCreator();
         xc.f();
+        YCreator yCreator = new YCreator();
+        yCreator.f();
     }
 }
 /* Output:

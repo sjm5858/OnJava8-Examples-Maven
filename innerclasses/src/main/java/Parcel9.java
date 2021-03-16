@@ -19,6 +19,11 @@ public class Parcel9 {
 
     public static void main(String[] args) {
         Parcel9 p = new Parcel9();
-        Destination d = p.destination("Tasmania");
+        String str = "2334";
+        Destination d = p.destination(str);
+//        Destination d = p.destination("Tasmania");
+        System.out.println(d.readLabel());
+        str = "444";
+        System.out.println(d.readLabel());
     }
 }

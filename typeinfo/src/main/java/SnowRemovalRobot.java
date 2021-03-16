@@ -5,6 +5,7 @@
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Supplier;
 
 public class SnowRemovalRobot implements Robot {
     private String name;
@@ -31,6 +32,17 @@ public class SnowRemovalRobot implements Robot {
             new Operation(
                     () -> name + " can chip ice",
                     () -> System.out.println(name + " chipping ice")),
+            new Operation(new Supplier<String>() {
+                @Override
+                public String get() {
+                    return name + " can study Java";
+                }
+            }, new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println(name + " studying Java");
+                }
+            }),
             new Operation(
                     () -> name + " can clear the roof",
                     () -> System.out.println(

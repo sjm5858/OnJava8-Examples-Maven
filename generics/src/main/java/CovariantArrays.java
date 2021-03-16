@@ -23,13 +23,13 @@ public class CovariantArrays {
         // Runtime type is Apple[], not Fruit[] or Orange[]:
         try {
             // Compiler allows you to add Fruit:
-            fruit[0] = new Fruit(); // ArrayStoreException
+            fruit[2] = new Fruit(); // ArrayStoreException
         } catch (Exception e) {
             System.out.println(e);
         }
         try {
             // Compiler allows you to add Oranges:
-            fruit[0] = new Orange(); // ArrayStoreException
+            fruit[3] = new Orange(); // ArrayStoreException
         } catch (Exception e) {
             System.out.println(e);
         }

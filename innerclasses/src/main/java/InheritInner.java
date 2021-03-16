@@ -6,17 +6,27 @@
 
 class WithInner {
     class Inner {
+        private int a;
+
+        public Inner(int a) {
+            this.a = a;
+        }
+
+        public int getA() {
+            return a;
+        }
     }
 }
 
 public class InheritInner extends WithInner.Inner {
-    //- InheritInner() {} // Won't compile
+//     InheritInner() {} // Won't compile
     InheritInner(WithInner wi) {
-        wi.super();
+        wi.super(1);
     }
 
     public static void main(String[] args) {
         WithInner wi = new WithInner();
         InheritInner ii = new InheritInner(wi);
+        System.out.println(ii.getA());
     }
 }
