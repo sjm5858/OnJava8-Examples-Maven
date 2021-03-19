@@ -8,10 +8,12 @@ import java.util.Comparator;
 public class SortedComparator {
     public static void
     main(String[] args) throws Exception {
-        FileToWords.stream("Cheese.dat")
+        FileToWords.stream("streams/src/main/java/Cheese.dat")
                 .skip(10)
                 .limit(10)
-                .sorted(Comparator.reverseOrder())
+//                .sorted(Comparator.reverseOrder())
+//                .sorted(Comparator.naturalOrder())
+                .sorted()
                 .map(w -> w + " ")
                 .forEach(System.out::print);
     }

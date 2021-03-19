@@ -14,4 +14,8 @@ public class RandInts {
     public static IntStream rands() {
         return Arrays.stream(rints);
     }
+
+    public static void main(String[] args) {
+        rands().forEach(System.out::println);
+    }
 }

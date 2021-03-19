@@ -15,6 +15,7 @@ public class StackTest {
         while (!stack.isEmpty()) {
             System.out.print(stack.pop() + " ");
         }
+        System.out.println(stack.size());
     }
 }
 /* Output:

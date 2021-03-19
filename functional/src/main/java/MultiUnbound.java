@@ -6,12 +6,15 @@
 
 class This {
     void two(int i, double d) {
+        System.out.println("This.two");
     }
 
     void three(int i, double d, String s) {
+        System.out.println("This.three");
     }
 
     void four(int i, double d, String s, char c) {
+        System.out.println("This.four");
     }
 }
 

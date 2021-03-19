@@ -10,7 +10,24 @@ public class CurriedIntAdd {
     public static void main(String[] args) {
         IntFunction<IntUnaryOperator>
                 curriedIntAdd = a -> b -> a + b;
-        IntUnaryOperator add4 = curriedIntAdd.apply(4);
+
+        IntFunction<IntUnaryOperator>
+                curriedIntAdd2 = new IntFunction<IntUnaryOperator>() {
+            @Override
+            public IntUnaryOperator apply(int a) {
+                return new IntUnaryOperator() {
+                    @Override
+                    public int applyAsInt(int b) {
+                        return a + b;
+                    }
+                };
+            }
+        };
+
+        IntFunction<IntUnaryOperator>
+                curriedIntAdd3 = a -> (IntUnaryOperator) b -> a + b;
+
+        IntUnaryOperator add4 = curriedIntAdd3.apply(4);
         System.out.println(add4.applyAsInt(5));
     }
 }

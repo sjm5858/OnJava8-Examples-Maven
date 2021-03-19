@@ -6,10 +6,7 @@
 
 import pets.*;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class MapOfList {
     public static final Map<Person, List<? extends Pet>>
@@ -32,7 +29,7 @@ public class MapOfList {
                 Arrays.asList(
                         new Rat("Fuzzy"), new Rat("Fizzy")));
         petPeople.put(new Person("Isaac"),
-                Arrays.asList(new Rat("Freckly")));
+                Collections.singletonList(new Rat("Freckly")));
     }
 
     public static void main(String[] args) {

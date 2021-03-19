@@ -13,7 +13,7 @@ public class UniqueWords {
     public static void
     main(String[] args) throws Exception {
         List<String> lines = Files.readAllLines(
-                Paths.get("SetOperations.java"));
+                Paths.get("collections/src/main/java/SetOperations.java"));
         Set<String> words = new TreeSet<>();
         for (String line : lines) {
             for (String word : line.split("\\W+")) {

@@ -4,6 +4,7 @@
 // Visit http://OnJava8.com for more book information.
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.function.Supplier;
 
@@ -15,10 +16,10 @@ public class Closure8 {
     }
 
     public static void main(String[] args) {
-        Closure8 c7 = new Closure8();
+        Closure8 c8 = new Closure8();
         List<Integer>
-                l1 = c7.makeFun().get(),
-                l2 = c7.makeFun().get();
+                l1 = c8.makeFun().get(),
+                l2 = c8.makeFun().get();
         System.out.println(l1);
         System.out.println(l2);
         l1.add(42);

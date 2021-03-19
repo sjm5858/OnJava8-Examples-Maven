@@ -27,7 +27,7 @@ public class FileToWordsBuilder {
 
     public static void
     main(String[] args) throws Exception {
-        new FileToWordsBuilder("Cheese.dat").stream()
+        new FileToWordsBuilder("streams/src/main/java/Cheese.dat").stream()
                 .limit(7)
                 .map(w -> w + " ")
                 .forEach(System.out::print);

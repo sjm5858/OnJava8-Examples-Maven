@@ -16,7 +16,7 @@ class OptionalBasics {
     }
 
     public static void main(String[] args) {
-        test(Stream.of("Epithets").findFirst());
+        test(Stream.of("Epithets", "sjm666").skip(1).findFirst());
         test(Stream.<String>empty().findFirst());
     }
 }

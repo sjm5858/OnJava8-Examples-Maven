@@ -8,8 +8,13 @@ import onjava.Operations;
 import java.util.Arrays;
 
 public class Machine2 {
+    private static void show(String str){
+        System.out.println(str);
+    }
     public static void main(String[] args) {
         Arrays.stream(new Operations[]{
+                () -> Machine2.show("SJM"),
+                () -> Machine2.show("666"),
                 () -> Operations.show("Bing"),
                 () -> Operations.show("Crack"),
                 () -> Operations.show("Twist"),

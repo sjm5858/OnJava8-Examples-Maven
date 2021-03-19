@@ -11,9 +11,34 @@ public class Curry3Args {
                 Function<String,
                         Function<String, String>>> sum =
                 a -> b -> c -> a + b + c;
+
+        Function<String,
+                Function<String,
+                        Function<String, String>>> sum2 = new Function<String, Function<String, Function<String, String>>>() {
+            @Override
+            public Function<String, Function<String, String>> apply(String a) {
+                return new Function<String, Function<String, String>>() {
+                    @Override
+                    public Function<String, String> apply(String b) {
+                        return new Function<String, String>() {
+                            @Override
+                            public String apply(String c) {
+                                return a + b + c;
+                            }
+                        };
+                    }
+                };
+            }
+        };
+
+        Function<String,
+                Function<String,
+                        Function<String, String>>> sum3 =
+                a -> (Function<String, Function<String, String>>) b -> (Function<String, String>) c -> a + b + c;
+
         Function<String,
                 Function<String, String>> hi =
-                sum.apply("Hi ");
+                sum2.apply("Hi ");
         Function<String, String> ho =
                 hi.apply("Ho ");
         System.out.println(ho.apply("Hup"));
