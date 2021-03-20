@@ -7,7 +7,7 @@
 public class Cleanup {
     public static void main(String[] args) {
         try {
-            InputFile in = new InputFile("Cleanup.java");
+            InputFile in = new InputFile("exceptions/src/main/java/Cleanup.java");
             try {
                 String s;
                 int i = 1;
