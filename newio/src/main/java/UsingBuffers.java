@@ -19,6 +19,7 @@ public class UsingBuffers {
 
     public static void main(String[] args) {
         char[] data = "UsingBuffers".toCharArray();
+//        char[] data = "12345678".toCharArray();
         ByteBuffer bb =
                 ByteBuffer.allocate(data.length * 2);
         CharBuffer cb = bb.asCharBuffer();

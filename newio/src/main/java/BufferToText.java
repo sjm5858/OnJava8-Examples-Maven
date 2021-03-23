@@ -17,7 +17,7 @@ public class BufferToText {
     public static void main(String[] args) {
         try (
                 FileChannel fc = new FileOutputStream(
-                        "data2.txt").getChannel()
+                        "newio/src/main/java/files/data2.txt").getChannel()
         ) {
             fc.write(ByteBuffer.wrap("Some text".getBytes()));
         } catch (IOException e) {
@@ -26,7 +26,7 @@ public class BufferToText {
         ByteBuffer buff = ByteBuffer.allocate(BSIZE);
         try (
                 FileChannel fc = new FileInputStream(
-                        "data2.txt").getChannel()
+                        "newio/src/main/java/files/data2.txt").getChannel()
         ) {
             fc.read(buff);
         } catch (IOException e) {
@@ -45,7 +45,7 @@ public class BufferToText {
         // Encode with something that prints:
         try (
                 FileChannel fc = new FileOutputStream(
-                        "data2.txt").getChannel()
+                        "newio/src/main/java/files/data2.txt").getChannel()
         ) {
             fc.write(ByteBuffer.wrap(
                     "Some text".getBytes("UTF-16BE")));
@@ -56,7 +56,7 @@ public class BufferToText {
         buff.clear();
         try (
                 FileChannel fc = new FileInputStream(
-                        "data2.txt").getChannel()
+                        "newio/src/main/java/files/data2.txt").getChannel()
         ) {
             fc.read(buff);
         } catch (IOException e) {
@@ -69,7 +69,7 @@ public class BufferToText {
         buff.asCharBuffer().put("Some text");
         try (
                 FileChannel fc = new FileOutputStream(
-                        "data2.txt").getChannel()
+                        "newio/src/main/java/files/data2.txt").getChannel()
         ) {
             fc.write(buff);
         } catch (IOException e) {
@@ -79,7 +79,7 @@ public class BufferToText {
         buff.clear();
         try (
                 FileChannel fc = new FileInputStream(
-                        "data2.txt").getChannel()
+                        "newio/src/main/java/files/data2.txt").getChannel()
         ) {
             fc.read(buff);
         } catch (IOException e) {

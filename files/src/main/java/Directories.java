@@ -60,8 +60,8 @@ public class Directories {
             Path variant = makeVariant();
             if (!Files.exists(variant)) {
                 Files.createDirectories(variant);
-                Files.copy(Paths.get("D:\\codes\\ssm\\OnJava8\\files\\src\\main\\java\\Directories.java"),
-                        variant.resolve("File.txt"));
+                Files.copy(Paths.get("files/src/main/java/Directories.java"),
+                        variant.resolve("files/src/main/java/files/File.txt"));
                 Files.createTempFile(variant, null, null);
             }
         }

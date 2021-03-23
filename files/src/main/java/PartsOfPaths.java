@@ -10,7 +10,7 @@ public class PartsOfPaths {
     public static void main(String[] args) {
         System.out.println(System.getProperty("os.name"));
         Path p =
-                Paths.get("PartsOfPaths.java").toAbsolutePath();
+                Paths.get("files/src/main/java/PartsOfPaths.java").toAbsolutePath();
         for (int i = 0; i < p.getNameCount(); i++) {
             System.out.println(p.getName(i));
         }

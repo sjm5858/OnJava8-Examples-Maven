@@ -23,7 +23,6 @@ public class PathWatcher {
                         try {
                             System.out.println("deleting " + f);
                             Files.delete(f);
-//                            Thread.sleep(10);
                         } catch (IOException e) {
                             throw new RuntimeException(e);
                         }

@@ -12,6 +12,10 @@ import java.nio.channels.FileChannel;
 
 public class TransferTo {
     public static void main(String[] args) {
+        args = new String[]{
+                "newio/src/main/java/TransferTo.java",
+                "newio/src/main/java/files/TransferTo.txt "
+        };
         if (args.length != 2) {
             System.out.println(
                     "arguments: sourcefile destfile");

@@ -12,7 +12,7 @@ public class FileLocking {
     public static void main(String[] args) {
         try (
                 FileOutputStream fos =
-                        new FileOutputStream("file.txt");
+                        new FileOutputStream("newio/src/main/java/files/file.txt");
                 FileLock fl = fos.getChannel().tryLock()
         ) {
             if (fl != null) {

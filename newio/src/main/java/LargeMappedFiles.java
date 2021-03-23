@@ -7,6 +7,8 @@
 import java.io.RandomAccessFile;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 public class LargeMappedFiles {
     static int length = 0x8000000; // 128 MB
@@ -15,7 +17,7 @@ public class LargeMappedFiles {
     main(String[] args) throws Exception {
         try (
                 RandomAccessFile tdat =
-                        new RandomAccessFile("test.dat", "rw")
+                        new RandomAccessFile("newio/src/main/java/files/test.dat", "rw")
         ) {
             MappedByteBuffer out = tdat.getChannel().map(
                     FileChannel.MapMode.READ_WRITE, 0, length);

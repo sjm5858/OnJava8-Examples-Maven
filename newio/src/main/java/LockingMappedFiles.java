@@ -17,7 +17,7 @@ public class LockingMappedFiles {
 
     public static void
     main(String[] args) throws Exception {
-        fc = new RandomAccessFile("test.dat", "rw")
+        fc = new RandomAccessFile("newio/src/main/java/files/test.dat", "rw")
                 .getChannel();
         MappedByteBuffer out = fc.map(
                 FileChannel.MapMode.READ_WRITE, 0, LENGTH);

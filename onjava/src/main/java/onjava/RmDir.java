@@ -20,6 +20,7 @@ public class RmDir {
                     public FileVisitResult
                     visitFile(Path file, BasicFileAttributes attrs)
                             throws IOException {
+//                        System.out.println("file: " + file.toAbsolutePath());
                         Files.delete(file);
                         return FileVisitResult.CONTINUE;
                     }
@@ -28,6 +29,7 @@ public class RmDir {
                     public FileVisitResult
                     postVisitDirectory(Path dir, IOException exc)
                             throws IOException {
+//                        System.out.println("dir: " + dir.toAbsolutePath());
                         Files.delete(dir);
                         return FileVisitResult.CONTINUE;
                     }

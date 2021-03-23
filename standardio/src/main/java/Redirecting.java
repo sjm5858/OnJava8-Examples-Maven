@@ -11,10 +11,10 @@ public class Redirecting {
         PrintStream console = System.out;
         try (
                 BufferedInputStream in = new BufferedInputStream(
-                        new FileInputStream("Redirecting.java"));
+                        new FileInputStream("standardio/src/main/java/Redirecting.java"));
                 PrintStream out = new PrintStream(
                         new BufferedOutputStream(
-                                new FileOutputStream("Redirecting.txt")))
+                                new FileOutputStream("standardio/src/main/java/Redirecting.txt")))
         ) {
             System.setIn(in);
             System.setOut(out);
@@ -22,6 +22,7 @@ public class Redirecting {
             new BufferedReader(
                     new InputStreamReader(System.in))
                     .lines()
+                    .map(String::toUpperCase)
                     .forEach(System.out::println);
         } catch (IOException e) {
             throw new RuntimeException(e);
